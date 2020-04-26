@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.title {
+  height: 200px;
+}
+.main-container {
+  height: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.rule {
+  float: left;
+  margin-left: 50px;
+  padding: 20px;
+}
+.about {
+  float: right;
+  margin-right: 50px;
+  padding: 20px;
+}
+.footer {
+  margin-top: 90px;
+}
+
+.form-container {
+  padding: 50px;
+}
+.create-btn {
+  padding: 15px;
+  width: 30%;
+  margin-bottom: 0px;
+}

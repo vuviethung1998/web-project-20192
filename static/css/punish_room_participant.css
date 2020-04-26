@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.title {
+  height: 250px;
+}
+.main-container {
+  height: 330px;
+}
+.original-color {
+  background-color: #dae8fc;
+}
+.ready-btn {
+  padding: 20px 100px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.ready-btn:hover {
+  background-color: #97d077;
+}
+.clicked-color {
+  background-color: #97d077;
+}
+td {
+  height: 50px;
+}
+.rule {
+  float: left;
+  margin-left: 50px;
+  padding: 20px;
+}
+.about {
+  float: right;
+  margin-right: 50px;
+  padding: 20px;
+}
+.footer {
+  margin-top: 20px;
+}

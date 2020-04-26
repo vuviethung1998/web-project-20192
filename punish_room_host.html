@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/punish_room_host.css" />
+    <link rel="stylesheet" href="./static/css/style_w3css.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="title w3-container w3-center w3-padding-24">
+        PUNISHHHH
+      </div>
+      <div class="main-container w3-container">
+        <form action="punish_room_host.html" method="POST">
+          <table style="width: 50%; margin-left: 25%;">
+            <tr>
+              <td>
+                PLAYER NAME
+              </td>
+              <td>
+                <input type="text" name="player_name" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                FUNNY PUNISHMENT
+              </td>
+              <td>
+                <input type="text" name="funny_punishment" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                INTEREST PUNISHMENT
+              </td>
+              <td>
+                <input type="text" name="interesting_punishment" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                DANGEROUS PUNISHMENT
+              </td>
+              <td>
+                <input type="text" name="dangerous_punishment" />
+              </td>
+            </tr>
+          </table>
+          <div class="w3-center">
+            <input
+              id="btn"
+              class="ready-btn original-color"
+              type="submit"
+              value="START GAME"
+              onClick="clickedBtn(event)"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="w3-container footer">
+        <div class="rule w3-border w3 w3-round-xlarge">RULE</div>
+        <div class="about w3-border w3-round-xlarge">ABOUT</div>
+      </div>
+    </div>
+    <div id="pop-up" class="hide">
+      <div style="margin-top: 10px; margin-left: 30px;">Warning</div>
+      <div
+        style="
+          margin-top: 50px;
+          margin-left: 100px;
+          margin-right: 100px;
+          height: 100px;
+        "
+      >
+        PLAYER 1 IS NOT READY/NOT ENOUGH PLAYER
+      </div>
+      <div style="margin: 0 40%;">
+        <input
+          style="
+            background-color: #ffcccc;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+          "
+          type="submit"
+          value="OK"
+          onClick="closePopup(event)"
+        />
+      </div>
+    </div>
+  </body>
+  <script>
+    function clickedBtn(event) {
+      var readyBtn = document.getElementById("btn");
+      var popUp = document.getElementById("pop-up");
+      var participants = 1;
+
+      readyBtn.classList.remove("original-color");
+      readyBtn.classList.add("clicked-color");
+
+      if (participants < 2) {
+        popUp.classList.remove("hide");
+        popUp.classList.add("show");
+      }
+      event.preventDefault();
+    }
+    function closePopup(event) {
+      var popUp = document.getElementById("pop-up");
+
+      popUp.classList.remove("show");
+      popUp.classList.add("hide");
+      event.preventDefault();
+    }
+  </script>
+</html>

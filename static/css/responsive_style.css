@@ -1,0 +1,316 @@
+/*--------------------Mac Air ------------------------*/
+@media only screen and (max-height: 900px) {
+    .colsize{
+        height: 300px;
+    }
+    .punishpadding {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .buttonpadding {
+        padding-top: 48px;
+        padding-bottom: 100px;
+    }
+    .one-third {
+        height: 262px;
+    }
+}
+/*---------------------------Dell laptop ------------------------------*/
+@media only screen and (max-height: 768px) {
+    .colsize{
+        width: auto;
+        height: 250px;
+    }
+    .punishpadding {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .one-third {
+        height: 230px;
+    }
+}
+
+/* ------------------------------------------- iPad -------------------------------------------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /*-------Header---------*/
+    header {
+        display: none;
+    }
+
+    /*-------Main Section---------*/
+    .colsize {
+        width: auto;
+        height: 210px;
+    }
+    .buttonpadding {
+        display: block;
+        margin: 0 0 50px 0;
+    }
+    .w3-container {
+        padding: 0.01em 54px;
+    }
+    .w3-half {
+        display: none;
+    }
+    .mainsection {
+        padding-top: 32px;
+        padding-bottom: 0;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .punishpadding {
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+    .rulebutton {
+        margin-left: 300px;
+    }
+    #aboutsection {
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+    #mem1 {
+        display: block !important;
+    }
+    #mem2 {
+        display: block !important;
+    }
+    #mem3 {
+        display: block !important;
+    }
+    .section img {
+        display: none;
+    }
+    .w3-third {
+        width: 100%;
+    }
+    .one-third {
+        height: 350px;
+    }
+}
+
+/*------------------------------------------ Iphone5---------------------------------------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+/*-------Main Section---------*/
+    .mainsection h1{
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    .mainsection p {
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+    .mainmargin{
+        margin: 2% auto;
+    }
+    .mainsection{
+        padding-bottom: 0;
+        padding-top: 48px;
+    }
+    .punishpadding{
+        padding-top: 1px;
+        padding-bottom: 40px;
+    }
+    .colsize{
+        width: auto;
+        height: 130px ;
+    }
+    .punishbutton{
+        width: 150px;
+        height: 60px;
+        padding-top: 2px;
+    }
+/*-------Header---------*/
+    header{
+        display: inline;
+    }
+    #menu-icon{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+    nav {
+        padding: 15px 15px 0 0;
+    }
+    nav ul, nav:active ul{
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 0;
+        background: #ffffff;
+        right: 20px;
+        top: 35px;
+        border: 2px solid #1abc9c;
+        border-radius: 40px 0 40px 40px;
+        width: 50%;
+
+    }
+    nav:hover ul{
+        display: block;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding:10px 0;
+    }
+    .buttonpadding{
+        display: none;
+    }
+    .section{
+        display: none;
+    }
+    /*--Rule Section--*/
+    .one-third{
+        width: 100%;
+        height: 63px;
+    }
+    .one-third h3{
+        padding: 2%;
+        font-size: 200%;
+    }
+
+/*-------Footer---------*/
+    .social i {
+        font-size: 200%;
+        margin: 0;
+        padding: 0 5% 0.5% 2%;
+        color: white;
+    }
+}
+
+/*------------------------------------------ Iphone6---------------------------------------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+/*-------Main Section---------*/
+    .mainsection h1{
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    .mainsection p {
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+    .mainmargin{
+        margin: 2% auto;
+    }
+    .mainsection{
+        padding-bottom: 0;
+        padding-top: 48px;
+    }
+    .punishpadding{
+        padding-top: 1px;
+        padding-bottom: 40px;
+    }
+    .colsize{
+        width: auto;
+        height: 150px ;
+    }
+    .punishbutton{
+        width: 150px;
+        height: 60px;
+        padding-top: 2px;
+    }
+/*-------Header---------*/
+    header{
+        display: inline;
+    }
+    #menu-icon{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+    nav {
+        padding: 15px 15px 0 0;
+    }
+    nav ul, nav:active ul{
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 0;
+        background: #ffffff;
+        right: 20px;
+        top: 35px;
+        border: 2px solid #1abc9c;
+        border-radius: 40px 0 40px 40px;
+        width: 50%;
+
+    }
+    nav:hover ul{
+        display: block;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding:10px 0;
+    }
+    .buttonpadding{
+        display: none;
+    }
+    .section{
+        display: none;
+    }
+    /*--Rule Section--*/
+    .one-third{
+        width: 100%;
+        height: 75px;
+    }
+    .one-third h3{
+        padding: 4%;
+        font-size: 120%;
+    }
+
+/*-------Footer---------*/
+    .social i {
+        font-size: 200%;
+        margin: 0;
+        padding: 0 5% 0.5% 2%;
+        color: white;
+    }
+}
+/*-----------iframe--------*/
+/*iframe {*/
+    /*max-width: 800px;*/
+    /*margin: auto;*/
+/*}*/
+/*-----------neonfont-------------*/
+.neonfont {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.neonfont:hover {
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+.neonfont:hover {
+    color: #000000;
+}
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0c7ff9, 0 0 70px #0c7ff9, 0 0 80px #0c7ff9, 0 0 100px #0c7ff9, 0 0 150px #0c7ff9;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 15px #0c7ff9, 0 0 35px #0c7ff9, 0 0 40px #0c7ff9, 0 0 50px #0c7ff9, 0 0 75px #0c7ff9;
+  }
+}
+
+
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0c7ff9, 0 0 70px #0c7ff9, 0 0 80px #0c7ff9, 0 0 100px #0c7ff9, 0 0 150px #0c7ff9;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0c7ff9, 0 0 35px #0c7ff9, 0 0 40px #0c7ff9, 0 0 50px #0c7ff9, 0 0 75px #0c7ff9;
+  }
+}
+
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0c7ff9, 0 0 70px #0c7ff9, 0 0 80px #0c7ff9, 0 0 100px #0c7ff9, 0 0 150px #0c7ff9;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0c7ff9, 0 0 35px #0c7ff9, 0 0 40px #0c7ff9, 0 0 50px #0c7ff9, 0 0 75px #0c7ff9;
+  }
+}
