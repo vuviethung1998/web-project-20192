@@ -4,6 +4,7 @@
 }
 .title {
   height: 250px;
+  padding-top: 24px;
 }
 .main-container {
   height: 330px;
@@ -25,12 +26,12 @@
 
 #pop-up {
   position: absolute;
-  top: 40%;
-  left: 30%;
+  top: 38%;
+  left: 33%;
   border: 1px solid black;
   width: 35%;
   height: 220px;
-  background-color: #ffffff;
+  background-color: #cec6c6;
 }
 .hide {
   visibility: hidden;
