@@ -39,7 +39,7 @@
 .show {
   visibility: visible;
 }
-#pop-up-punish {
+#pop-up-show-punishment {
   position: absolute;
   top: 38%;
   left: 33%;
@@ -48,9 +48,12 @@
   height: 220px;
   background-color: #cec6c6;
 }
-.punish{
-  color: red;
-}
-.button-complete{
-  text-align: center;
+#pop-up-waiting{
+    position: absolute;
+    top: 38%;
+    left: 33%;
+    border: 1px solid black;
+    width: 35%;
+    height: 220px;
+    background-color: #cec6c6;
 }

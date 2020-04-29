@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/punish_room_loser.css" />
+    <link rel="stylesheet" href="./static/css/style_w3css.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Loser Page</title>
+</head>
+
+<body>
+    <div class="container-fluid" style="
+        background-image: url(./static/images/bg-01.jpg);
+        background-size: cover;
+        min-height: 100vh;
+      ">
+        <div>
+            <div class="title container w3-center h1">
+                PUNISH GAME!!!
+            </div>
+            <div class="main-container w3-container">
+                <form action="punish_room_host.html" method="POST">
+                    <div class="h2" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;
+              ">
+                        Player1, you are chosen to be punished
+                    </div>
+                    <div class="h5" style="text-align: center; margin: 30px 0;">
+                        Please choose one of two kinds of punishment
+                    </div>
+                    <div class="w3-center">
+                        <input id="btn" class="btn btn-lg btn-primary submit-btn border-0" type="submit" value="PUNISH"
+                            onClick="getPunishment(event)" />
+                    </div>
+                </form>
+            </div>
+            <div class="w3-container footer">
+                <div class="w3-container exit">
+                    <input type="submit" class="btn btn-lg btn-primary submit-btn border-0"
+                        style="background-color: #f8cecc; color: #000000;" value="EXIT" onClick="exiting(event)"
+                        name="is_exited" />
+                </div>
+            </div>
+        </div>
+
+        <div id="pop-up" class="hide">
+            <div style="margin-top: 50px; margin-left: 25%;">
+                Are you sure you want to exit?
+            </div>
+            <div style="margin: 0 20%;">
+                <div style="
+              display: inline-block;
+              width: 30%;
+              margin: 50px;
+              margin-top: 80px;
+              margin-left: 20px;
+            ">
+                    <form action="intro_room.html" method="POST">
+                        <input style="
+                  background-color: #d5e8d4;
+                  width: 100%;
+                  border: 1px solid black;
+                  border-radius: 5px;
+                  display: inline-block;
+                  height: 35px;
+                  cursor: pointer;
+                " type="submit" value="Yes" />
+                    </form>
+                </div>
+                <div style="display: inline-block; width: 30%;">
+                    <input style="
+                background-color: #ffcccc;
+                width: 100%;
+                border: 1px solid black;
+                border-radius: 5px;
+                display: inline-block;
+                height: 35px;
+                cursor: pointer;
+              " type="submit" value="No" onClick="notExiting(event)" />
+                </div>
+            </div>
+        </div>
+        <div id="pop-up-show-punishment" class="hide">
+            <div class="h2" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;
+              ">
+                Your punishment is:
+            </div>
+            <div class="h4 punish" style="display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;">
+      hasaghi
+                <!-- print punishment here -->
+            </div>
+
+            <div style="margin: 0 20%;" class="button-complete">
+                <div style="display: inline-block; width: 50%; ">
+                    <input style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ffcccc;
+                width: 100%;
+                border: 1px solid black;
+                border-radius: 5px;
+                display: inline-block;
+                height: 35px;
+                cursor: pointer;
+              " type="submit" value="FINISH" onClick="notExiting(event)" />
+                </div>
+            </div>
+        </div>
+        <div id="pop-up-waiting" class="hide">
+            <div class="h4" style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin: 30px 0;
+                    ">
+                The punishment hasn't finished yet
+            </div>
+            <div class="h3" style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin: 30px 0;
+                    ">
+                Wait a bit!
+            </div>
+
+            <div style="margin: 0 20%;" class="button-complete">
+                <div style="display: inline-block; width: 50%; ">
+                    <input style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-color: #ffcccc;
+                      width: 100%;
+                      border: 1px solid black;
+                      border-radius: 5px;
+                      display: inline-block;
+                      height: 35px;
+                      cursor: pointer;
+                    " type="submit" value="COMPLETE" onClick="notExitingPopUpPunish(event)" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    function exiting(event) {
+        var popUp = document.getElementById("pop-up");
+
+        popUp.classList.remove("hide");
+        popUp.classList.add("show");
+        event.preventDefault();
+    }
+    function notExiting(event) {
+        var popUp = document.getElementById("pop-up");
+
+        popUp.classList.remove("show");
+        popUp.classList.add("hide");
+        event.preventDefault();
+    }
+    function notExitingPopUpPunish(event) {
+        var popUpPunish = document.getElementById("pop-up-waiting");
+
+        popUpPunish.classList.remove("show");
+        popUpPunish.classList.add("hide");
+    }
+    function getPunishment(event) {
+        var popUpWaiting = document.getElementById("pop-up-waiting");
+        var popUpPunishment = document.getElementById("pop-up-show-punishment");
+        // if hasn't finished
+        // popUpWaiting.classList.remove("hide");
+        // popUpWaiting.classList.add("show");
+        // if finished choosing
+        popUpPunishment.classList.remove("hide");
+        popUpPunishment.classList.add("show");
+        event.preventDefault();
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
