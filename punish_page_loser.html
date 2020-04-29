@@ -36,7 +36,7 @@
                     </div>
                     <div class="w3-center">
                         <input id="btn" class="btn btn-lg btn-primary submit-btn border-0" type="submit" value="PUNISH"
-                            onClick="getPunishment(event)" />
+                            onClick="punishment(event)" />
                     </div>
                 </form>
             </div>
@@ -48,7 +48,6 @@
                 </div>
             </div>
         </div>
-
         <div id="pop-up" class="hide">
             <div style="margin-top: 50px; margin-left: 25%;">
                 Are you sure you want to exit?
@@ -86,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div id="pop-up-show-punishment" class="hide">
+        <div id="pop-up-punish" class="hide">
             <div class="h2" style="
                 display: flex;
                 justify-content: center;
@@ -96,10 +95,9 @@
                 Your punishment is:
             </div>
             <div class="h4 punish" style="display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 30px 0;">
-      hasaghi
+                    justify-content: center;
+                    align-items: center;
+                    margin: 30px 0;">
                 <!-- print punishment here -->
             </div>
 
@@ -120,42 +118,46 @@
                 </div>
             </div>
         </div>
-        <div id="pop-up-waiting" class="hide">
-            <div class="h4" style="
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      margin: 30px 0;
-                    ">
+        <div id="pop-up-waiting" class="hide"> 
+            <div class="h2" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;
+              ">
                 The punishment hasn't finished yet
             </div>
-            <div class="h3" style="
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      margin: 30px 0;
-                    ">
+            <div class="h4" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;
+              ">
                 Wait a bit!
+            </div>
+            <div class="h4 punish" style="display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;">
+                <!-- print punishment here -->
             </div>
 
             <div style="margin: 0 20%;" class="button-complete">
                 <div style="display: inline-block; width: 50%; ">
-                    <input style="
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      background-color: #ffcccc;
-                      width: 100%;
-                      border: 1px solid black;
-                      border-radius: 5px;
-                      display: inline-block;
-                      height: 35px;
-                      cursor: pointer;
-                    " type="submit" value="COMPLETE" onClick="notExitingPopUpPunish(event)" />
+                    <input style="display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ffcccc;
+                    width: 100%;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    display: inline-block;
+                    height: 35px;
+                    cursor: pointer;
+                    " type="submit" value="Okay" onClick="notExiting(event)" />
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 <script>
@@ -173,21 +175,11 @@
         popUp.classList.add("hide");
         event.preventDefault();
     }
-    function notExitingPopUpPunish(event) {
-        var popUpPunish = document.getElementById("pop-up-waiting");
+    function punishment(event) {
+        var popUp = document.getElementById("pop-up-punish");
 
-        popUpPunish.classList.remove("show");
-        popUpPunish.classList.add("hide");
-    }
-    function getPunishment(event) {
-        var popUpWaiting = document.getElementById("pop-up-waiting");
-        var popUpPunishment = document.getElementById("pop-up-show-punishment");
-        // if hasn't finished
-        // popUpWaiting.classList.remove("hide");
-        // popUpWaiting.classList.add("show");
-        // if finished choosing
-        popUpPunishment.classList.remove("hide");
-        popUpPunishment.classList.add("show");
+        popUp.classList.remove("hide");
+        popUp.classList.add("show");
         event.preventDefault();
     }
 </script>
