@@ -4,6 +4,7 @@
 }
 .title {
   height: 250px;
+  padding-top: 24px;
 }
 .main-container {
   height: 330px;

@@ -4,12 +4,13 @@
 }
 .title {
   height: 250px;
+  padding-top: 24px;
 }
 .main-container {
   height: 330px;
 }
 .original-color {
-  background-color: #dae8fc;
+  background-color: #dae8fc !important;
 }
 .ready-btn {
   padding: 20px 100px;
@@ -17,10 +18,10 @@
   border-radius: 10px;
 }
 .ready-btn:hover {
-  background-color: #97d077;
+  background-color: #97d077 !important;
 }
 .clicked-color {
-  background-color: #97d077;
+  background-color: #97d077 !important;
 }
 td {
   height: 50px;

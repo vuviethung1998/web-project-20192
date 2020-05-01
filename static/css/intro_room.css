@@ -4,26 +4,27 @@
 }
 .title {
   height: 250px;
+  padding-top: 24px;
 }
 .main-container {
   height: 330px;
 }
 .submit-btn {
-  padding: 10px;
+  padding: 1.5rem !important;
   margin: 15px;
-  border-radius: 10%;
+  border-radius: 1.5rem !important;
   background-color: #bbb;
 }
 .rule {
   float: left;
-  margin-left: 50px;
+  height: 100%;
   padding: 20px;
 }
 .about {
   float: right;
-  margin-right: 50px;
   padding: 20px;
 }
 .footer {
   margin-top: 20px;
+  height: 80px;
 }
