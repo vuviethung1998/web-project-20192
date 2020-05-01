@@ -5,84 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/css/intro_room_v2.css" />
     <link rel="stylesheet" href="./static/css/style_w3css.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div class="title w3-container w3-center w3-padding-24">
-      PUNISHHHH
-    </div>
-    <div class="main-container w3-container w3-center">
-      <form action="create_room.html" method="POST">
-        <div style="margin: auto;">
-          <div
-            class="w3-container w3-border"
-            style="margin-right: 20px; display: inline-block;"
-          >
-            <div class="w3-container create-room-container">
-              <div class="w3-container w3-center w3-padding-16">
-                CREATE ROOM
+    <div
+      class="container-fluid"
+      style="
+        background-image: url(./static/images/bg-01.jpg);
+        background-size: cover;
+        min-height: 100vh;
+      "
+    >
+      <div class="title container w3-center h1">
+        PUNISH GAME!!!
+      </div>
+      <div class="main-container w3-container w3-center">
+        <form action="create_room.html" method="POST">
+          <div style="margin: auto;">
+            <div
+              class="w3-container w3-border"
+              style="margin-right: 20px; display: inline-block;"
+            >
+              <div class="w3-container">
+                <div class="w3-container w3-center w3-padding-16 h3">
+                  CREATE ROOM
+                </div>
+                <div class="w3-container">
+                  <table class="form-container table">
+                    <tr>
+                      <td>
+                        ROOM PASSWORD
+                      </td>
+                      <td>
+                        <input type="text" name="room_password" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        NO. PLAYERS
+                      </td>
+                      <td>
+                        <input type="text" name="nb_players" />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
               </div>
               <div class="w3-container">
-                <table class="form-container" style="width: 100%;">
+                <input
+                  type="submit"
+                  class="btn btn-lg btn-success submit-btn"
+                  value="CREATE ROOM"
+                  name="is_created"
+                />
+              </div>
+            </div>
+            <div class="w3-container w3-border" style="display: inline-block;">
+              <div class="w3-container w3-center w3-padding-16 h3">
+                ENTER ROOM
+              </div>
+              <div class="w3-container">
+                <table class="form-container table">
                   <tr>
-                    <td style="margin-left: 30px;">
+                    <td>
                       ROOM PASSWORD
                     </td>
                     <td>
                       <input type="text" name="room_password" />
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      NO. PLAYERS
-                    </td>
-                    <td>
-                      <input type="text" name="nb_players" />
-                    </td>
-                  </tr>
                 </table>
               </div>
-            </div>
-            <div class="w3-container">
-              <input
-                class="create-btn w3-round-xlarge"
-                type="submit"
-                value="CREATE"
-                name="is_created"
-              />
+              <div class="w3-container">
+                <input
+                  type="submit"
+                  class="btn btn-lg btn-primary submit-btn"
+                  value="ENTER ROOM"
+                  name="is_entered"
+                />
+              </div>
             </div>
           </div>
-          <div class="w3-container w3-border" style="display: inline-block;">
-            <div class="w3-container w3-center w3-padding-16">
-              ENTER ROOM
+        </form>
+      </div>
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="col-6 text-left">
+            <div class="previous">
+              <button type="button" class="btn btn-lg btn-warning rule">
+                RULE
+              </button>
             </div>
-            <div class="w3-container">
-              <table class="form-container" style="width: 100%;">
-                <tr>
-                  <td style="margin-left: 30px;">
-                    ROOM PASSWORD
-                  </td>
-                  <td>
-                    <input type="text" name="room_password" />
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="w3-container" style="margin-top: 30px;">
-              <input
-                class="create-btn w3-round-xlarge"
-                type="submit"
-                value="ENTER"
-                name="is_created"
-              />
+          </div>
+          <div class="col-6 text-right">
+            <div class="next">
+              <button type="button" class="btn btn-lg btn-info about">
+                ABOUT
+              </button>
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
-    <div class="w3-container footer">
-      <div class="rule w3-border w3 w3-round-xlarge">RULE</div>
-      <div class="about w3-border w3-round-xlarge">ABOUT</div>
-    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

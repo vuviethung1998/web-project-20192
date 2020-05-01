@@ -5,76 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/css/punish_room_loser.css" />
     <link rel="stylesheet" href="./static/css/style_w3css.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div class="title w3-container w3-center w3-padding-24">
-        PUNISHHHH
-      </div>
-      <div class="main-container w3-container">
-        <form action="punish_room_host.html" method="POST">
-          <div
-            style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 30px 0;
-            "
+    <div
+      class="container-fluid"
+      style="
+        background-image: url(./static/images/bg-01.jpg);
+        background-size: cover;
+        min-height: 100vh;
+      "
+    >
+      <div>
+        <div class="title container w3-center h1">
+          PUNISH GAME!!!
+        </div>
+        <div class="main-container w3-container">
+          <form action="punish_room_host.html" method="POST">
+            <div
+              class="h2"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;
+              "
+            >
+              Player1, you are chosen to be punished
+            </div>
+            <div class="h5" style="text-align: center; margin: 30px 0;">
+              Please choose one of two kinds of punishment
+            </div>
+            <div class="w3-center">
+              <input
+                id="btn"
+                class="ready-btn btn btn-warning"
+                type="submit"
+                value="TRUTH"
+                onClick="clickedBtn(event)"
+              />
+            </div>
+            <div class="w3-center">
+              <input
+                id="btn"
+                class="ready-btn btn btn-danger"
+                type="submit"
+                value="DARE"
+                onClick="clickedBtn(event)"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="w3-container footer">
+          <!-- <div
+            class="exit w3-border w3-round-xlarge"
+            style="background-color: #f8cecc;"
+            onClick="exiting(event)"
           >
-            Player1, you are chosen to be punished
-          </div>
-          <div style="text-align: center; margin: 30px 0;">
-            Please choose one of two kinds of punishment
-          </div>
-          <div class="w3-center">
+            EXIT
+          </div> -->
+          <div class="w3-container exit">
             <input
-              id="btn"
-              class="ready-btn original-color"
               type="submit"
-              value="TRUTH"
-              onClick="clickedBtn(event)"
+              class="btn btn-lg btn-primary submit-btn border-0"
+              style="background-color: #f8cecc; color: #000000;"
+              value="EXIT"
+              onClick="exiting(event)"
+              name="is_exited"
             />
           </div>
-          <div class="w3-center">
-            <input
-              id="btn"
-              class="ready-btn original-color"
-              type="submit"
-              value="DARE"
-              onClick="clickedBtn(event)"
-            />
-          </div>
-        </form>
-      </div>
-      <div class="w3-container footer">
-        <div
-          class="exit w3-border w3-round-xlarge"
-          style="background-color: #f8cecc;"
-          onClick="exiting(event)"
-        >
-          EXIT
         </div>
       </div>
-    </div>
-    <div id="pop-up" class="hide">
-      <div style="margin-top: 50px; margin-left: 25%;">
-        Are you sure you want to exit?
-      </div>
-      <div style="margin: 0 20%;">
-        <div
-          style="
-            display: inline-block;
-            width: 30%;
-            margin: 50px;
-            margin-top: 80px;
-            margin-left: 20px;
-          "
-        >
-          <form action="intro_room.html" method="POST">
+      <div id="pop-up" class="hide">
+        <div style="margin-top: 50px; margin-left: 25%;">
+          Are you sure you want to exit?
+        </div>
+        <div style="margin: 0 20%;">
+          <div
+            style="
+              display: inline-block;
+              width: 30%;
+              margin: 50px;
+              margin-top: 80px;
+              margin-left: 20px;
+            "
+          >
+            <form action="intro_room.html" method="POST">
+              <input
+                style="
+                  background-color: #d5e8d4;
+                  width: 100%;
+                  border: 1px solid black;
+                  border-radius: 5px;
+                  display: inline-block;
+                  height: 35px;
+                  cursor: pointer;
+                "
+                type="submit"
+                value="Yes"
+              />
+            </form>
+          </div>
+          <div style="display: inline-block; width: 30%;">
             <input
               style="
-                background-color: #d5e8d4;
+                background-color: #ffcccc;
                 width: 100%;
                 border: 1px solid black;
                 border-radius: 5px;
@@ -83,25 +124,10 @@
                 cursor: pointer;
               "
               type="submit"
-              value="Yes"
+              value="No"
+              onClick="notExiting(event)"
             />
-          </form>
-        </div>
-        <div style="display: inline-block; width: 30%;">
-          <input
-            style="
-              background-color: #ffcccc;
-              width: 100%;
-              border: 1px solid black;
-              border-radius: 5px;
-              display: inline-block;
-              height: 35px;
-              cursor: pointer;
-            "
-            type="submit"
-            value="No"
-            onClick="notExiting(event)"
-          />
+          </div>
         </div>
       </div>
     </div>
@@ -122,4 +148,19 @@
       event.preventDefault();
     }
   </script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
 </html>

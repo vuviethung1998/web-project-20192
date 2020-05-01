@@ -5,63 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/css/punish_room_host.css" />
     <link rel="stylesheet" href="./static/css/style_w3css.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div class="title w3-container w3-center w3-padding-24">
-        PUNISHHHH
+    <div
+      class="container-fluid"
+      style="
+        background-image: url(./static/images/bg-01.jpg);
+        background-size: cover;
+        min-height: 100vh;
+      "
+    >
+      <div class="title container w3-center h1">
+        PUNISH GAME!!!
       </div>
       <div class="main-container w3-container">
-        <form action="punish_room_host.html" method="POST">
-          <table style="width: 50%; margin-left: 25%;">
-            <tr>
+        <!-- <form action="punish_room_participant.html" method="POST"> -->
+        <div class="table-responsive">
+          <table
+            class="table table-striped table-bordered"
+            style="width: 50%; margin-left: 25%;"
+          >
+            <tr class="table-primary">
               <td>
                 PLAYER NAME
               </td>
               <td>
-                <input type="text" name="player_name" />
+                <div class="input-group">
+                  <input style="width: 100%;" type="text" name="player_name" />
+                </div>
               </td>
             </tr>
-            <tr>
+            <tr class="table-secondary">
               <td>
                 FUNNY PUNISHMENT
               </td>
               <td>
-                <input type="text" name="funny_punishment" />
+                <input
+                  style="width: 100%;"
+                  type="text"
+                  name="funny_punishment"
+                />
               </td>
             </tr>
-            <tr>
+            <tr class="table-warning">
               <td>
                 INTEREST PUNISHMENT
               </td>
               <td>
-                <input type="text" name="interesting_punishment" />
+                <input
+                  style="width: 100%;"
+                  type="text"
+                  name="interesting_punishment"
+                />
               </td>
             </tr>
-            <tr>
+            <tr class="table-danger">
               <td>
                 DANGEROUS PUNISHMENT
               </td>
               <td>
-                <input type="text" name="dangerous_punishment" />
+                <input
+                  style="width: 100%;"
+                  type="text"
+                  name="dangerous_punishment"
+                />
               </td>
             </tr>
           </table>
-          <div class="w3-center">
-            <input
-              id="btn"
-              class="ready-btn original-color"
-              type="submit"
-              value="START GAME"
-              onClick="clickedBtn(event)"
-            />
-          </div>
-        </form>
+        </div>
+        <div class="w3-center">
+          <input
+            id="btn"
+            class="ready-btn original-color"
+            type="submit"
+            value="START GAME"
+            onClick="clickedBtn()"
+            name="start_game"
+          />
+        </div>
+        <!-- <div class="w3-container w3-center">
+          <input
+            type="submit"
+            class="btn btn-lg btn-primary submit-btn original-color"
+            value="READY"
+            name="is_read"
+            onclick="clickedBtn()"
+          />
+        </div> -->
+        <!-- </form> -->
       </div>
-      <div class="w3-container footer">
-        <div class="rule w3-border w3 w3-round-xlarge">RULE</div>
-        <div class="about w3-border w3-round-xlarge">ABOUT</div>
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="col-6 text-left">
+            <div class="previous">
+              <button type="button" class="btn btn-lg btn-warning rule">
+                RULE
+              </button>
+            </div>
+          </div>
+          <div class="col-6 text-right">
+            <div class="next">
+              <button type="button" class="btn btn-lg btn-info about">
+                ABOUT
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="pop-up" class="hide">
@@ -114,4 +170,19 @@
       event.preventDefault();
     }
   </script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
 </html>
