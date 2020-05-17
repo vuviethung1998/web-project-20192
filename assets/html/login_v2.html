@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Punishhhh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+        <link rel="icon" href="https://imgur.com/uikhuNO" />
+        <link rel="stylesheet" href="../css/create_room_v2.css" />
+    </head>
+    <body>
+        <div class="bg">
+            <div class="title" >
+                <p style="color: #CCCCCC">Punishhhh</p>
+            </div>
+            <div>
+                <form action="main_room_v2.html" method="POST">
+                    <div class="text" >
+                        <p style="font-size: 8vw; margin-left: 10%;">login</p>
+                    </div> 
+                    <div data-validate="Username is required">
+                        <table style="margin:auto">
+                            <tr>
+                                <td style="text-align: right; padding-bottom: 15px; padding-right: 10px; font-size: 3vw" class="text">
+                                    <p>username</p>
+                                </td>
+                                <td>
+                                    <input type="text" name="room_password" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; padding-bottom: 15px; padding-right: 10px;font-size: 3vw" class="text"> 
+                                    password 
+                                </td>
+                                <td>
+                                    <input type="text" name="nb_players" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="#">
+                                        <p style="font-size: 1.5vw; color: #CCCCCC; text-align: right; margin-bottom: 10px" class="text">Forgot password?</p>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                  
+                    <button class="bbutton">login</button>
+                </form>
+                <form
+                    action=""
+                    method="POST"
+                    >
+                    <button class="aboutbutton">about</button>               
+                </form>
+
+                <form
+                    action=""
+                    method="POST" 
+                    >
+                    <button class="rulebutton">rule</button>               
+                </form>
+                <div id="my-signin2" style="margin-left: 42%;margin-top: 8%"></div>
+                <script>
+                    function onSuccess(googleUser) {
+                        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                    }
+                    function onFailure(error) {
+                        console.log(error);
+                    }
+                    function renderButton() {
+                        gapi.signin2.render('my-signin2', {
+                            'scope': 'profile email',
+                            'width': 240,
+                            'height': 50,
+                            'longtitle': true,
+                            'theme': 'dark',
+                            'onsuccess': onSuccess,
+                            'onfailure': onFailure
+                        });
+                    }
+                </script>
+
+                <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+
+            </div>
+        </div>
+    </body>
+</html>
