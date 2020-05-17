@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8251ca4-f7c3-42c5-83c0-08e1b980efe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache/demo.apache.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Punish.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_backup/Punish.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sql_backup/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/create_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/create_room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/enter_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/enter_room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/intro_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/intro_room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/intro_room_v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/intro_room_v2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/punish_page_loser.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/punish_page_loser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/punish_page_winner.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/punish_page_winner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/punish_room_host.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/punish_room_host.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/punish_room_loser.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/punish_room_loser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/punish_room_participant.html" beforeDir="false" afterPath="$PROJECT_DIR$/ web/assets/html/punish_room_participant.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/ web/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/ web/db_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ web/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_backup/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ web/sql_backup/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_backup/midterm_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ web/sql_backup/midterm_db.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +52,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../20192-web-programming/Lab10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php-webserver" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ web" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="DbConnection.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/db/DbConnection.php">
@@ -70,6 +92,7 @@
       <workItem from="1588159685895" duration="1638000" />
       <workItem from="1588169505900" duration="5653000" />
       <workItem from="1589250951988" duration="1088000" />
+      <workItem from="1589464965609" duration="2299000" />
     </task>
     <servers />
   </component>
@@ -93,10 +116,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="361" y="27" width="700" height="741" key="#PHP/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588169532553" />
-    <state x="494" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589252038646">
+    <state x="563" y="144" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589465370727">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="494" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588160351015" />
+    <state x="563" y="144" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1589465370727" />
     <state x="494" y="154" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1589252038646" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1588174368775">
       <screen x="67" y="27" width="1299" height="741" />
