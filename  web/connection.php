@@ -1,31 +1,29 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
 <?php
-# parameters for connecting to the "default_schema"
-$username = "user";
-$password = "user";
+// Use Singleton design pattern to force a class to have only one instance
+class DB
+{
+    private static $instance = NULL;
+    private static $serverName ='127.0.0.1';
+    private static $dbName = 'midterm_db';
+    private static $username = 'root';
+    private static $password = 'root';
 
-$hostspec = "localhost";
-$database = "default_schema";
+    function  __construct()
+    {
+    }
 
-$dbtype = 'mysqli';
-
-# DSN constructed from parameters
-
-$dsn = "$dbtype://$username:$password@$hostspec/$database";
-
-# Establish the connection
-
-$db = DB::connect($dsn);
-
-if (DB::isError($db)) {
-
-    die($db->getMessage());
+    public static function getInstance() {
+      if (!isset(self::$instance)) {
+        try {
+          self::$instance = new PDO('mysql:host=' . self::$serverName . ';dbname=' . self::$dbName, self::$username, self::$password);
+          self::$instance->exec("SET NAMES 'utf8'");
+          self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $ex) {
+          die($ex->getMessage());
+        }
+      }
+      return self::$instance;
+    }
 }
-?>
-</body>
-</html>
+
+$ist =  DB::getInstance();
