@@ -2,7 +2,7 @@
 require_once('controllers/base_controller.php');
 require_once('models/punishment.php');
 
-class PunishmentController extends BaseController {
+class PunishmentsController extends BaseController {
 
   function __construct() {
     $this->folder = 'punishments';
@@ -27,7 +27,7 @@ class PunishmentController extends BaseController {
     if($create_funny_punishment_result == 1 &&
       $create_interesting_punishment_result == 1 &&
       $create_dangerous_punishment_result == 1) {
-        
+        // $this->render('result.php');
       }
 
   }
