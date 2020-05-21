@@ -1,15 +1,11 @@
 <?php
-// Use Singleton design pattern to force a class to have only one instance
 class DB
 {
-    private static $instance = NULL;
-    private static $serverName ='127.0.0.1';
-    private static $dbName = 'midterm_db';
-    private static $username = 'root';
-    private static $password = 'root';
-
-    function  __construct()
-    {}
+    private static $instance = NULl;
+    private static $serverName = "remotemysql.com";
+    private static $dbName = "VTwLrpQaXa";
+    private static $username = "VTwLrpQaXa";
+    private static $password = "JDtdqbnQVl";
 
     public static function getInstance() {
       if (!isset(self::$instance)) {
@@ -21,8 +17,7 @@ class DB
           die($ex->getMessage());
         }
       }
+
       return self::$instance;
     }
 }
-
-$ist =  DB::getInstance();

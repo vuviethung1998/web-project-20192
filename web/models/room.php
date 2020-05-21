@@ -1,7 +1,4 @@
 <?php
-include("../../connection.php")
-?>
-<?php
 class Room
 {
     public $room_password;
@@ -41,7 +38,7 @@ class Room
         $req->execute(array('room_password' => $room_password));
 
         $item = $req->fetch();
-        if (isset($item['room_password'])) {
+        if (count($req->fetchAll()) > 0 )  {
             return 1;
         }
         return $state["Room not found"];

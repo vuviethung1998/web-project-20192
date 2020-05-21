@@ -1,6 +1,6 @@
 <?php
 return array(
-    'Room existed' => 6,
-    'Room not found' => 7,
-    'Exceeds max player number!' => 8
+    'Room existed!' => 2,
+    'Exceeds max player number!' => 3,
+    'Room not found' => 4
 );

@@ -9,9 +9,12 @@
 </head>
 <body>
     <!-- Content -->
-    <div style="min-height: 70vh; background-color: white;">
+    <div  class="bg">
+        <div class="title" >
+            <p class="customfont" href="#">Punishhhh</p>
+        </div>
         <?= @$content ?>
     </div>
-    <!-- Content end -->
+<!-- Content end -->
 </body>
 </html>

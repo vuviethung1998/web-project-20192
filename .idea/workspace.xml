@@ -2,44 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8251ca4-f7c3-42c5-83c0-08e1b980efe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/config/state.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/controllers/base_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/controllers/load_more_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/controllers/page_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/controllers/room_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/models/product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/models/room.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/routes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/layouts/application.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/pages/error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/pages/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/pages/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/room/create_room.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/room/enter_room.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/application/models/room.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/create_room.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/enter_room.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/intro_room.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/intro_room_v2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/punish_page_loser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/punish_page_winner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/punish_room_host.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/punish_room_loser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/assets/html/punish_room_participant.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/db_login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql_backup/backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/sql_backup/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sql_backup/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/sql_backup/midterm_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_backup/midterm_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ web/sql_backup/test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_backup/test.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apache/demo.apache.conf" beforeDir="false" afterPath="$PROJECT_DIR$/apache/demo.apache.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/state.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config/state.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controllers/base_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/base_controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controllers/load_more_controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controllers/page_controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controllers/pages_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/pages_controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controllers/room_controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models/product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models/room.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/models/room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/layouts/application.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/layouts/application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/pages/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/pages/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/pages/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/pages/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/room/create_room.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/room/enter_room.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +111,7 @@
       <workItem from="1589945333311" duration="618000" />
       <workItem from="1589952590772" duration="335000" />
       <workItem from="1589990830517" duration="599000" />
-      <workItem from="1590066784289" duration="1573000" />
+      <workItem from="1590066784289" duration="4244000" />
     </task>
     <servers />
   </component>
