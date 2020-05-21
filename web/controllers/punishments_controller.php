@@ -5,7 +5,11 @@ require_once('models/punishment.php');
 class PunishmentController extends BaseController {
 
   function __construct() {
-    $this->folder = 'punishment';
+    $this->folder = 'punishments';
+  }
+
+  function render_punishment_room() {
+    $this->render('punishment_room');
   }
 
   function create_punishment() {
