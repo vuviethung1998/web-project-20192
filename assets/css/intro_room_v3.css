@@ -31,10 +31,10 @@
 .title {
     height: 200px;
     padding-top: 60px;
-    font-size: 14vw;
+    font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
     color: #FC4C86;
-    margin-left: 23%;
+    text-align: center;
 }
 p.fontsetup {
     font-size: 130px;
