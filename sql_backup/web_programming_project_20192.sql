@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql:3306
--- Generation Time: May 21, 2020 at 05:20 PM
+-- Generation Time: May 21, 2020 at 05:31 PM
 -- Server version: 5.7.30
 -- PHP Version: 7.4.5
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project_web_programming_20192`
+-- Database: `web_programming_project_20192`
 --
 
 -- --------------------------------------------------------
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `player` (
   `player_id` int(11) NOT NULL,
-  `player_name` varchar(255) NOT NULL,
-  `player_role` enum('player','host') NOT NULL,
-  `player_state` enum('0','1','2') NOT NULL,
-  `room_id` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `player_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `player_role` enum('player','host') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `player_state` enum('0','1','2') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `room_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `player`
@@ -65,10 +65,10 @@ CREATE TABLE `player_punishment_view` (
 
 CREATE TABLE `punishment` (
   `punishment_id` int(11) NOT NULL,
-  `room_id` varchar(255) NOT NULL,
-  `punishment_content` varchar(255) NOT NULL,
-  `type` enum('F','I','D') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `room_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `punishment_content` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` enum('F','I','D') COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `punishment`
@@ -86,10 +86,10 @@ INSERT INTO `punishment` (`punishment_id`, `room_id`, `punishment_content`, `typ
 --
 
 CREATE TABLE `room` (
-  `room_id` varchar(255) NOT NULL,
+  `room_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `player_number` int(11) NOT NULL,
   `is_closed` tinyint(1) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `room`
@@ -110,8 +110,8 @@ CREATE TABLE `round` (
   `round_num` int(11) NOT NULL,
   `punishment_id` int(11) NOT NULL,
   `player_id` int(11) NOT NULL,
-  `room_id` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `room_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `round`
