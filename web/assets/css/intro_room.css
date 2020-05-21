@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.title {
+  height: 250px;
+  padding-top: 24px;
+}
+.main-container {
+  height: 330px;
+}
+.submit-btn {
+  padding: 1.5rem !important;
+  margin: 15px;
+  border-radius: 1.5rem !important;
+  background-color: #bbb;
+}
+.rule {
+  float: left;
+  height: 100%;
+  padding: 20px;
+}
+.about {
+  float: right;
+  padding: 20px;
+}
+.footer {
+  margin-top: 20px;
+  height: 80px;
+}
