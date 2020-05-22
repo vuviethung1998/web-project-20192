@@ -2,10 +2,15 @@
 class DB
 {
     private static $instance = NULl;
-    private static $serverName = "remotemysql.com";
-    private static $dbName = "VTwLrpQaXa";
-    private static $username = "VTwLrpQaXa";
-    private static $password = "JDtdqbnQVl";
+    // private static $serverName = "remotemysql.com";
+    // private static $dbName = "VTwLrpQaXa";
+    // private static $username = "VTwLrpQaXa";
+    // private static $password = "JDtdqbnQVl";
+
+    private static $serverName = "mysql";
+    private static $dbName = "midterm_db";
+    private static $username = "root";
+    private static $password = "root";
 
     public static function getInstance() {
       if (!isset(self::$instance)) {
