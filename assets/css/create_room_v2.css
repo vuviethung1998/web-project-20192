@@ -1,101 +1,123 @@
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .bg {
-    /* The image used */
-    background-image: url("../images/ui2.png");
+  /* The image used */
+  background-image: url("../images/ui2.png");
 
-    /*Full height*/ 
-    height: 100%;
+  /*Full height*/
+  height: 100%;
 
-    /*Center and scale the image nicely*/ 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*  background: url(../images/ui1.png) no-repeat center center fixed;
+  /*Center and scale the image nicely*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  background: url(../images/ui1.png) no-repeat center center fixed;
       background-size: cover;
       height: 100%;
       overflow: hidden;*/
-
 }
 @font-face {
-    font-family: "SVNNew Athletic M54";
-    src: url(../font/head.ttf) format("truetype");
+  font-family: "SVNNew Athletic M54";
+  src: url(../font/head.ttf) format("truetype");
 }
 @font-face {
-    font-family: "SVNLifehack Sans";
-    src: url(../font/body.ttf) format("truetype");
+  font-family: "SVNLifehack Sans";
+  src: url(../font/body.ttf) format("truetype");
 }
 .title {
-    height: 120px;
-    font-size: 10vw;
-    font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #FAD141;
-    margin-left: 28%;
-    border: none;
-    background: none;
+  height: 120px;
+  font-size: 10vw;
+  font-family: "SVNNew Athletic M54", Verdana, Tahoma;
+  color: #fad141;
+  margin-left: 28%;
+  border: none;
+  background: none;
 }
 
 .text {
-    font-size: 5vw;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    color: #FC4C86;
-    margin-left: 38%;
+  font-size: 5vw;
+  font-family: "SVNLifehack Sans", Verdana, Tahoma;
+  color: #fc4c86;
+  margin-left: 38%;
 }
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #FC4C86;
-    border-radius: 15px;
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #fc4c86;
+  border-radius: 15px;
 }
 
 .aboutbutton {
-    position: fixed;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
-    border: none;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 75px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    margin-left: 5%;
-    margin-top: 100px
+  background-color: #ff9933;
+  border-radius: 12px;
+  position: fixed;
+  padding: 15px 10px;
+  font-family: "SVNLifehack Sans", Verdana, Tahoma;
+  border: none;
+  color: #fc4c86;
+  display: inline-block;
+  font-size: 75px;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 100px;
 }
 .rulebutton {
-    position: fixed;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
-    border: none;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 75px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    margin-left: 89%;
-    margin-top: 100px;
+  background-color: #ff9933;
+  border-radius: 12px;
+  position: fixed;
+  font-family: "SVNLifehack Sans", Verdana, Tahoma;
+  border: none;
+  color: #fc4c86;
+  padding: 15px 12px;
+  display: inline-block;
+  font-size: 75px;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  margin-left: 89%;
+  margin-top: 100px;
 }
 .bbutton {
-    position: fixed;
-    width: 300px;    
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
-    border: 5px dashed #CCCCCC;
-    border-radius: 15px;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 75px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    margin-left: 40%;
-    margin-top: 30px;
+  position: fixed;
+  width: 300px;
+  font-family: "SVNLifehack Sans", Verdana, Tahoma;
+  background: none;
+  border: 5px dashed #cccccc;
+  border-radius: 15px;
+  color: #fc4c86;
+  display: inline-block;
+  font-size: 75px;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 30px;
+}
+.closeRule:hover,
+.closeRule:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#ruleModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ff9933;
 }
