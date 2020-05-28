@@ -1,11 +1,13 @@
+body, html {
+    height: 100%;
+}
 * {
     padding: 0;
     margin: 0;
 }
-
 .bg {
     /* The image used */
-    background-image: url("../images/ui1.png");
+    background-image: url("../images/ui4.png");
 
     /*Full height*/ 
     height: 100%;
@@ -29,44 +31,28 @@
     src: url(../font/body.ttf) format("truetype");
 }
 .title {
-    height: 200px;
+    height: 120px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
     color: #FC4C86;
-    text-align: center;
-}
-p.fontsetup {
-    font-size: 130px;
-    color: #FC4C86;
-}
-.createbutton {
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
+    margin-left: 28%;
     border: none;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 140px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    margin-left: 35%;
-    height: 130px;
-
-}
-.enterbutton {
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
-    border: none;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 140px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    margin-left: 36.5%;
-    margin-top: 0%;
-    height: 150px;
+}
 
+.text {
+    font-size: 5vw;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    color: #FC4C86;
+    margin-left: 38%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #FC4C86;
+    border-radius: 15px;
 }
 
 .aboutbutton {
@@ -81,6 +67,7 @@ p.fontsetup {
     outline: none;
     text-align: center;
     margin-left: 5%;
+    margin-top: 100px
 }
 .rulebutton {
     position: fixed;
@@ -94,4 +81,21 @@ p.fontsetup {
     outline: none;
     text-align: center;
     margin-left: 89%;
+    margin-top: 100px;
+}
+.bbutton {
+    position: fixed;
+    width: 300px;    
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: 5px dashed #CCCCCC;
+    border-radius: 15px;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 75px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 30px;
 }
