@@ -53,6 +53,8 @@ input[type=text] {
     box-sizing: border-box;
     border: 2px solid #FC4C86;
     border-radius: 15px;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    color: #FC4C86;
 }
 
 .aboutbutton {
@@ -66,8 +68,8 @@ input[type=text] {
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 5%;
-    margin-top: 10%
+    bottom: 50px;
+    left: 50px;
 }
 .rulebutton {
     position: fixed;
@@ -80,8 +82,8 @@ input[type=text] {
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 89%;
-    margin-top: 10%;
+    bottom: 50px;
+    right: 50px;
 }
 
 .abutton {

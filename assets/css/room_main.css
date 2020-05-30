@@ -16,11 +16,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*  background: url(../images/ui1.png) no-repeat center center fixed;
-      background-size: cover;
-      height: 100%;
-      overflow: hidden;*/
 
+    overflow: scroll;
+    background-attachment: fixed;
 }
 @font-face {
     font-family: "SVNNew Athletic M54";
@@ -31,20 +29,26 @@ body, html {
     src: url(../font/body.ttf) format("truetype");
 }
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.title__button {
     height: 120px;
     font-size: 10vw;
-    font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
-    margin-left: 28%;
     border: none;
-    background: none;
+    background: none;    
 }
 
 .text {
-    font-size: 5vw;
+    font-size: 32px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
-    margin-left: 38%;
+    text-align: center;
+    border: 5px solid #FC4C86;
 }
 input[type=text] {
     width: 100%;
@@ -52,7 +56,30 @@ input[type=text] {
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #FC4C86;
-    border-radius: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    perspective: 1px;
+}
+.imgborder{
+    text-align: center;
+}
+#table__list {
+    border-collapse: collapse;
+    margin: auto; 
+    width: 140px;
+    border: 5px solid #FC4C86;
+    border-radius: 20px;
+    overflow: hidden;
+    perspective: 1px;
+}
+#table__general {
+    border-collapse: separate;
+    border-spacing: 50px 10px;
+    margin: auto; 
+    width: 100px;
+    height: 100px;
+    padding-top: 50px;  
+    padding-bottom: 100px;
 }
 
 .aboutbutton {
@@ -66,8 +93,8 @@ input[type=text] {
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 5%;
-    margin-top: 100px
+    bottom: 50px;
+    left: 50px;
 }
 .rulebutton {
     position: fixed;
@@ -80,22 +107,35 @@ input[type=text] {
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 89%;
-    margin-top: 100px;
+    bottom: 50px;
+    right: 50px;
 }
-.bbutton {
+.passroom {
     position: fixed;
-    width: 300px;    
+    width: 100px;    
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
-    border: 5px dashed #CCCCCC;
-    border-radius: 15px;
+    border: 3px solid #FC4C86;
+    border-radius: 10px;
+    padding: 10px;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 32px;
+    cursor: pointer;
+    outline: none;
+    top: 50px;
+    left: 50px;
+}
+.startbutton {
+    position: relative;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
     color: #FC4C86;
     display: inline-block;
     font-size: 75px;
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 40%;
-    margin-top: 30px;
+    bottom: 150px;
 }
