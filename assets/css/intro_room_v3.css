@@ -1,8 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 .bg {
     /* The image used */
     background-image: url("../images/ui1.png");
@@ -20,14 +15,7 @@
       overflow: hidden;*/
 
 }
-@font-face {
-    font-family: "SVNNew Athletic M54";
-    src: url(../font/head.ttf) format("truetype");
-}
-@font-face {
-    font-family: "SVNLifehack Sans";
-    src: url(../font/body.ttf) format("truetype");
-}
+
 .title {
     height: 200px;
     font-size: 10vw;
@@ -35,10 +23,7 @@
     color: #FC4C86;
     text-align: center;
 }
-p.fontsetup {
-    font-size: 130px;
-    color: #FC4C86;
-}
+
 .createbutton {
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
@@ -69,31 +54,3 @@ p.fontsetup {
 
 }
 
-.aboutbutton {
-    position: fixed;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
-    border: none;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 75px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    bottom: 50px;
-    left: 50px;
-}
-.rulebutton {
-    position: fixed;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
-    border: none;
-    color: #FC4C86;
-    display: inline-block;
-    font-size: 75px;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-    bottom: 50px;
-    right: 50px;
-}
