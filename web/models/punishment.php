@@ -1,5 +1,5 @@
 <?php
-
+require_once('connection.php');
 class Punishment {
 
   public $room_id;
@@ -15,17 +15,20 @@ class Punishment {
   function createPunishment($room_id, $punishment_content, $type, $state) {
     $db = DB::getInstance();
     
-    if($type != 'F' || $type != 'I' || $type != 'D') {
+    if($type != 'F' && $type != 'I' && $type != 'D') {
       return $state['Invalid type of punishment'];
     }
 
     $create_punish_query = "INSERT INTO punishment(room_id, punishment_content, type) VALUES
-                            ( {$room_id} , {$punishment_content}, {$type})";
+                            (:room_id , :punishment_content, :type)";
 
-    if($db->exec($create_punish_query)) {
+    $req = $db->prepare($create_punish_query);
+    if($req->execute(array(':room_id' => $room_id, 
+      ':punishment_content' => $punishment_content, 
+      ':type' => $type))) {
       return 1;
     }
-    else return 0;
+    else return $state['Failed to add punishments!'];
   }
 
 }

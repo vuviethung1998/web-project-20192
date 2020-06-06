@@ -1,4 +1,4 @@
-<div class="bg">
+<div class="bg-enter-room">
     <div>
         <form action="index.php?controller=rooms&action=enter_room" method="POST">
             <div class="text" >
