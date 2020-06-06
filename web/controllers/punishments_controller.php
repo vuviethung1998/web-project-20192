@@ -27,7 +27,7 @@ class PunishmentsController extends BaseController {
     if($create_funny_punishment_result == 1 &&
       $create_interesting_punishment_result == 1 &&
       $create_dangerous_punishment_result == 1) {
-        // $this->render('result.php');
+        // $this->render('main.php');
       }
 
   }
