@@ -1,7 +1,7 @@
 version: "3.2"
 services:
   php:
-    build: "./"
+    build: "./php/"
     networks:
       - backend
     volumes:
@@ -14,7 +14,7 @@ services:
       - frontend
       - backend
     ports:
-      - "8080:80"
+      - "8082:80"
     volumes:
       - ./web/:/var/www/html/
 networks:
