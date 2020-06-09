@@ -1,4 +1,4 @@
-.bg {
+.bg-enter-room {
     /* The image used */
     background-image: url("../images/ui2.png");
 
@@ -16,17 +16,17 @@
 
 }
 
-.title {
+.title-enter-room {
     height: 120px;
-    padding-top: 60px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #49CED9;
+    color: #FAD141;
     margin-left: 28%;
-    margin-bottom: 50px;
+    border: none;
+    background: none;
 }
 
-.text {
+.text-enter-room {
     font-size: 5vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
@@ -44,7 +44,7 @@ input[type=text] {
 }
 
 
-.abutton {
+.abutton-enter-room {
     position: fixed;
     width: 300px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 

@@ -1,12 +1,18 @@
-<div class="bg">
+<div class="bg-enter-room">
+    <form
+        action=""
+        method="POST"
+        >
+        <button class="title-enter-room">Punishhhh</button>               
+    </form>
     <div>
         <form action="index.php?controller=rooms&action=enter_room" method="POST">
-            <div class="text" >
+            <div class="text-enter-room" >
                 <p style="font-size: 8vw">enter room</p>
             </div>
             <table style="margin:auto">
                 <tr>
-                    <td style="text-align: right; padding-bottom: 15px; padding-right: 10px" class="text">
+                    <td style="text-align: right; padding-bottom: 15px; padding-right: 10px" class="text-enter-room">
                         <p>password</p>
                     </td>
                     <td>
@@ -14,7 +20,7 @@
                     </td>
                 </tr>
             </table>
-            <button class="abutton" type="submit">enter</button>
+            <button class="abutton-enter-room" type="submit">enter</button>
         </form>
         <form
             action=""
