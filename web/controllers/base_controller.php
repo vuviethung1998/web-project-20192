@@ -20,11 +20,11 @@ class BaseController
         }
     }
 
-    // ham hien thi pop up
-    function render_popup()
-    {
+      // ham hien thi pop up
+      function render_popup()
+      {
 
-    }
+      }
 
       // Hàm hiển thị kết quả ra cho người dùng.
       function render_data($file, $data = array())

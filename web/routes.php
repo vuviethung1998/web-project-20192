@@ -1,7 +1,8 @@
 <?php
 $controllers = array(
   'pages' => ['home', 'error'],
-    'rooms' => ['render_create_room', 'render_enter_room', 'create_room', 'enter_room']
+    'rooms' => ['render_create_room', 'render_enter_room', 'create_room', 'enter_room'],
+    'punishments' => ['render_punishment_room', 'create_punishment']
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
 
 // Nếu các tham số nhận được từ URL không hợp lệ (không thuộc list controller và action có thể gọi
