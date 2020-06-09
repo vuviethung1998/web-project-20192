@@ -1,11 +1,11 @@
 <?php
 class DB
 {
-    private static $instance = NULl;
-    private static $serverName = "remotemysql.com";
-    private static $dbName = "VTwLrpQaXa";
-    private static $username = "VTwLrpQaXa";
-    private static $password = "JDtdqbnQVl";
+    private static $instance = NULL;
+    private static $serverName = "172.27.0.1";
+    private static $dbName = "web_programming_project_20192";
+    private static $username = "root";
+    private static $password = "root";
 
     public static function getInstance() {
       if (!isset(self::$instance)) {
@@ -14,6 +14,7 @@ class DB
           self::$instance->exec("SET NAMES 'utf8'");
           self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $ex) {
+          print($ex);
           die($ex->getMessage());
         }
       }
