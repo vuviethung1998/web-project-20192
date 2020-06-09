@@ -1,6 +1,6 @@
 .bg {
     /* The image used */
-    background-image: url("../images/ui4.png");
+    background-image: url("../images/ui8.png");
 
     /*Full height*/ 
     height: 100%;
@@ -11,7 +11,7 @@
     background-size: cover;
 
     overflow: scroll;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .title {
@@ -23,7 +23,7 @@
 .title__button {
     height: 120px;
     font-size: 10vw;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    font-family: "Qaskin", Verdana, Tahoma; 
     color: #FC4C86;
     border: none;
     background: none;    

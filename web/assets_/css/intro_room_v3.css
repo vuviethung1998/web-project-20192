@@ -1,6 +1,6 @@
-.bg {
+.bg-intro-room {
     /* The image used */
-    background-image: url("../images/ui3.png");
+    background-image: url("../images/ui1.png");
 
     /*Full height*/ 
     height: 100%;
@@ -16,54 +16,41 @@
 
 }
 
-.title {
-    height: 120px;
-    margin-top: 1%;
+.title-intro-room {
+    height: 200px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #FAD141;
-    margin-left: 28%;
-    border: none;
-    background: none;
-}
-
-.text {
-    font-size: 3vw;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
-    margin-left: 38%;
     text-align: center;
 }
-input[type=text] {
-    width: 300px;
-    height: 100px;
-    padding: 12px 20px;
-    margin: 3px 0;
-    box-sizing: border-box;
-    border: 2px dashed #FC4C86;
-    border-radius: 15px;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    font-size: 3vw;
-    color: #FC4C86;
-}
-#table1 {
-  border-collapse: separate;
-  border-spacing: 50px 10px;
-}
 
-.bbutton {
-    position: fixed;
-    width: 300px;    
+.createbutton {
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
     border: none;
-    border-radius: 15px;
     color: #FC4C86;
     display: inline-block;
-    font-size: 75px;
+    font-size: 140px;
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 40%;
-    margin-top: 30px;
+    margin-left: 35%;
+    height: 130px;
+
 }
+.enterbutton {
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 140px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 36.5%;
+    margin-top: 0%;
+    height: 150px;
+
+}
+

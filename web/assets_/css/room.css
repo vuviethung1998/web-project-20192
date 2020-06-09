@@ -1,4 +1,4 @@
-.bg {
+.bg-add-punish {
     /* The image used */
     background-image: url("../images/ui3.png");
 
@@ -16,7 +16,7 @@
 
 }
 
-.title {
+.title-room {
     height: 120px;
     margin-top: 1%;
     font-size: 10vw;
@@ -27,7 +27,7 @@
     background: none;
 }
 
-.text {
+.text-room {
     font-size: 3vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
@@ -51,7 +51,7 @@ input[type=text] {
   border-spacing: 50px 10px;
 }
 
-.bbutton {
+.bbutton-room {
     position: fixed;
     width: 300px;    
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
