@@ -1,4 +1,9 @@
-.bg-intro-room {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.bg {
     /* The image used */
     background-image: url("../images/ui1.png");
 
@@ -15,15 +20,26 @@
       overflow: hidden;*/
 
 }
-
-.title-intro-room {
+@font-face {
+    font-family: "SVNNew Athletic M54";
+    src: url(../font/head.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SVNLifehack Sans";
+    src: url(../font/body.ttf) format("truetype");
+}
+.title {
     height: 200px;
-    font-size: 10vw;
+    padding-top: 60px;
+    font-size: 14vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
     color: #FC4C86;
-    text-align: center;
+    margin-left: 23%;
 }
-
+p.fontsetup {
+    font-size: 130px;
+    color: #FC4C86;
+}
 .createbutton {
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
@@ -54,3 +70,29 @@
 
 }
 
+.aboutbutton {
+    position: fixed;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 75px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 5%;
+}
+.rulebutton {
+    position: fixed;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 75px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 89%;
+}

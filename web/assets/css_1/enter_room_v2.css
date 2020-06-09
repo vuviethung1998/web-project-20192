@@ -1,4 +1,11 @@
-.bg-create-room {
+body, html {
+    height: 100%;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.bg {
     /* The image used */
     background-image: url("../images/ui2.png");
 
@@ -15,22 +22,28 @@
       overflow: hidden;*/
 
 }
-
+@font-face {
+    font-family: "SVNNew Athletic M54";
+    src: url(../font/head.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SVNLifehack Sans";
+    src: url(../font/body.ttf) format("truetype");
+}
 .title {
     height: 120px;
+    padding-top: 60px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #FAD141;
+    color: #49CED9;
     margin-left: 28%;
-    border: none;
-    background: none;
 }
 
 .text {
     font-size: 5vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
-    margin-left: 38%;
+    margin-left: 39%;
 }
 input[type=text] {
     width: 100%;
@@ -39,14 +52,40 @@ input[type=text] {
     box-sizing: border-box;
     border: 2px solid #FC4C86;
     border-radius: 15px;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    color: #FC4C86;
-    font-size: 24px;
 }
 
-.bbutton {
+.aboutbutton {
     position: fixed;
-    width: 300px;    
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 75px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 10%
+}
+.rulebutton {
+    position: fixed;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 75px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 89%;
+    margin-top: 10%;
+}
+
+.abutton {
+    position: fixed;
+    width: 300px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
     border: 5px dashed #CCCCCC;
@@ -58,5 +97,6 @@ input[type=text] {
     outline: none;
     text-align: center;
     margin-left: 40%;
-    margin-top: 30px;
+    margin-top: 3%;
+    padding-bottom: 15px;
 }
