@@ -18,19 +18,19 @@
 
 .title {
     height: 120px;
+    padding-top: 60px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #FAD141;
+    color: #49CED9;
     margin-left: 28%;
-    border: none;
-    background: none;
+    margin-bottom: 50px;
 }
 
 .text {
     font-size: 5vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
-    margin-left: 38%;
+    margin-left: 39%;
 }
 input[type=text] {
     width: 100%;
@@ -41,12 +41,12 @@ input[type=text] {
     border-radius: 15px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
-    font-size: 24px;
 }
 
-.bbutton {
+
+.abutton {
     position: fixed;
-    width: 300px;    
+    width: 300px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
     border: 5px dashed #CCCCCC;
@@ -58,5 +58,6 @@ input[type=text] {
     outline: none;
     text-align: center;
     margin-left: 40%;
-    margin-top: 30px;
+    margin-top: 3%;
+    padding-bottom: 15px;
 }

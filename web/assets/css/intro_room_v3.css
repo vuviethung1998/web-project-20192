@@ -1,4 +1,4 @@
-.bg {
+.bg-intro-room {
     /* The image used */
     background-image: url("../images/ui1.png");
 
@@ -16,7 +16,7 @@
 
 }
 
-.title {
+.title-intro-room {
     height: 200px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 

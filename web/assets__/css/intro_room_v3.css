@@ -1,6 +1,6 @@
 .bg {
     /* The image used */
-    background-image: url("../images/ui2.png");
+    background-image: url("../images/ui1.png");
 
     /*Full height*/ 
     height: 100%;
@@ -17,46 +17,40 @@
 }
 
 .title {
-    height: 120px;
+    height: 200px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #FAD141;
-    margin-left: 28%;
+    color: #FC4C86;
+    text-align: center;
+}
+
+.createbutton {
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
     border: none;
-    background: none;
-}
-
-.text {
-    font-size: 5vw;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    color: #FC4C86;
-    margin-left: 38%;
-}
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #FC4C86;
-    border-radius: 15px;
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    color: #FC4C86;
-    font-size: 24px;
-}
-
-.bbutton {
-    position: fixed;
-    width: 300px;    
-    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    background: none;
-    border: 5px dashed #CCCCCC;
-    border-radius: 15px;
     color: #FC4C86;
     display: inline-block;
-    font-size: 75px;
+    font-size: 140px;
     cursor: pointer;
     outline: none;
     text-align: center;
-    margin-left: 40%;
-    margin-top: 30px;
+    margin-left: 35%;
+    height: 130px;
+
 }
+.enterbutton {
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: none;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 140px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 36.5%;
+    margin-top: 0%;
+    height: 150px;
+
+}
+
