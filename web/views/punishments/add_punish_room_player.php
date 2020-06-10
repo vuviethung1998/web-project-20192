@@ -6,7 +6,7 @@
     id: <?php print($_SESSION['room_id']) ?>
   </div>
   <div>
-    <form action="index.php?controller=punishments&action=create_punishment" method="POST">
+    <form action="index.php?controller=punishments&action=create_punishment_player" method="POST">
       <table style="margin: auto; padding-top: 30px">
         <tr>
           <td style="text-align: right; padding-bottom: 15px; padding-right: 10px;" class="text-room">
