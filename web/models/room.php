@@ -1,4 +1,5 @@
-<?php
+<?php session_start();
+require_once('connection.php');
 class Room
 {
     public $room_password;
@@ -33,12 +34,16 @@ class Room
 
     static function find($room_password, $state)
     {
+        // print("starting finding room");
+        // print("Room password: " . $room_password);
         $db = DB::getInstance();
-        $req = $db->prepare('SELECT * FROM room WHERE room_id = :room_password');
-        $req->execute(array('room_password' => $room_password));
+        $req = $db->prepare("SELECT * FROM room WHERE `room_id` = :room_password");
+        $req->execute(array(':room_password' => $room_password));
 
         $item = $req->fetch();
-        if (count($req->fetchAll()) > 0 )  {
+        // print_r($item);
+        if ($item != NULL )  {
+            // print('find room successfully');
             return 1;
         }
         return $state["Room not found"];

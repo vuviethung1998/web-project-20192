@@ -24,12 +24,16 @@ class RoomsController extends BaseController {
         $player_num = $_POST['player_num'];
         $max_player_num = $arr['max_num_players'];
         $is_closed = 0;
-
+        // print("start creating room");
         $room_state = Room::createRoom($room_password, $player_num, $max_player_num, $is_closed, $state);
 
+        $_SESSION['room_id'] = $room_password;
+
+        // print("finish creating room");
         // get state: 1 -> create room succeeded, other -> error
         if ($room_state == 1) {
-            $this->render('main_room');
+            $this->folder = 'punishments';
+            $this->render('add_punish_room_host');
         }
 
     }
@@ -38,9 +42,12 @@ class RoomsController extends BaseController {
         $room_password = $_POST['room_password'];
         $state = include ('config/state.php');
 
+        $_SESSION['room_id'] = $room_password;
+
         $room_state = Room::find($room_password, $state);
         if ($room_state == 1) {
-            $this->render('main_room');
+            $this->folder = 'punishments';
+            $this->render('add_punish_room_player');
         }
     }
 }

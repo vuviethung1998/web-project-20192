@@ -16,17 +16,17 @@
 
 }
 
-.title-enter-room {
+.title {
     height: 120px;
+    padding-top: 60px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
-    color: #FAD141;
+    color: #49CED9;
     margin-left: 28%;
-    border: none;
-    background: none;
+    margin-bottom: 50px;
 }
 
-.text-enter-room {
+.text {
     font-size: 5vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
@@ -44,7 +44,7 @@ input[type=text] {
 }
 
 
-.abutton-enter-room {
+.abutton {
     position: fixed;
     width: 300px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
