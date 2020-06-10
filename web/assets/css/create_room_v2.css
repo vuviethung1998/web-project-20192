@@ -16,7 +16,7 @@
 
 }
 
-.title {
+.title-create-room {
     height: 120px;
     font-size: 10vw;
     font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
@@ -26,7 +26,7 @@
     background: none;
 }
 
-.text {
+.text-create-room {
     font-size: 5vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;

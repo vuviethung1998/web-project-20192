@@ -1,4 +1,4 @@
-<div class="bg">
+<div class="bg-room-main">
   <div class="title-room-main">
     <form action="intro_room_v3.html" method="POST">
       <button class="title__button">let's punishhh now!!!</button>
@@ -16,7 +16,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 1</td>
+              <td class="text-room-main">Player 1</td>
             </tr>
           </table>
         </td>
@@ -26,7 +26,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -36,7 +36,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -46,7 +46,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -56,59 +56,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <table id="table__list">
-            <tr>
-              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
-            </tr>
-            <tr>
-              <td class="text">Player 1</td>
-            </tr>
-          </table>
-        </td>
-        <td>
-          <table id="table__list">
-            <tr>
-              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
-            </tr>
-            <tr>
-              <td class="text">Player 2</td>
-            </tr>
-          </table>
-        </td>
-        <td>
-          <table id="table__list">
-            <tr>
-              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
-            </tr>
-            <tr>
-              <td class="text">Player 2</td>
-            </tr>
-          </table>
-        </td>
-        <td>
-          <table id="table__list">
-            <tr>
-              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
-            </tr>
-            <tr>
-              <td class="text">Player 2</td>
-            </tr>
-          </table>
-        </td>
-        <td>
-          <table id="table__list">
-            <tr>
-              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
-            </tr>
-            <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -120,7 +68,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 1</td>
+              <td class="text-room-main">Player 1</td>
             </tr>
           </table>
         </td>
@@ -130,7 +78,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -140,7 +88,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -150,7 +98,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -160,7 +108,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -172,7 +120,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 1</td>
+              <td class="text-room-main">Player 1</td>
             </tr>
           </table>
         </td>
@@ -182,7 +130,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -192,7 +140,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -202,7 +150,7 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
@@ -212,7 +160,59 @@
               <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
             </tr>
             <tr>
-              <td class="text">Player 2</td>
+              <td class="text-room-main">Player 2</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table id="table__list">
+            <tr>
+              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
+            </tr>
+            <tr>
+              <td class="text-room-main">Player 1</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table id="table__list">
+            <tr>
+              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
+            </tr>
+            <tr>
+              <td class="text-room-main">Player 2</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table id="table__list">
+            <tr>
+              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
+            </tr>
+            <tr>
+              <td class="text-room-main">Player 2</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table id="table__list">
+            <tr>
+              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
+            </tr>
+            <tr>
+              <td class="text-room-main">Player 2</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table id="table__list">
+            <tr>
+              <td class="imgborder"><img src="../../assets/images/icon.png" alt="Player" width="100" height="100"></td>
+            </tr>
+            <tr>
+              <td class="text-room-main">Player 2</td>
             </tr>
           </table>
         </td>
