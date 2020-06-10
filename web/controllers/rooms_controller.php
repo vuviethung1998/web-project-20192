@@ -34,6 +34,10 @@ class RoomsController extends BaseController {
         if ($room_state == 1) {
             $this->folder = 'punishments';
             $this->render('add_punish_room_host');
+        } elseif ($room_state == 2) {
+            $this->folder = 'rooms';
+            $this->render('create_room');
+            $_SESSION['room_state'] = $room_state;
         }
 
     }
@@ -48,6 +52,10 @@ class RoomsController extends BaseController {
         if ($room_state == 1) {
             $this->folder = 'punishments';
             $this->render('add_punish_room_player');
+        }
+        elseif ($room_state == 4) {
+            $this->folder = 'rooms';
+            $this->render('enter_room');
         }
     }
 }
