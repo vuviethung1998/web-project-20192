@@ -5,7 +5,7 @@ require_once('models/punishment.php');
 class PunishmentsController extends BaseController {
 
   function __construct() {
-    $this->folder = 'rooms';
+    $this->folder = 'punishments';
   }
 
   function render_punishment_room() {
@@ -33,6 +33,7 @@ class PunishmentsController extends BaseController {
     if($create_funny_punishment_result == 1 &&
       $create_interesting_punishment_result == 1 &&
       $create_dangerous_punishment_result == 1) {
+        $this->folder = 'rooms';
         $this->render('room_main_host');
       }
     else {

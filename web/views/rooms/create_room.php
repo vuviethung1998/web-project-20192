@@ -1,6 +1,6 @@
 <div class="bg-create-room">
     <form action="index.php?controller=rooms&action=create_room" method="POST">
-        <div class="text" >
+        <div class="text-create-room" >
             <p style="font-size: 8vw">create room</p>
         </div>
         <table style="margin:auto">

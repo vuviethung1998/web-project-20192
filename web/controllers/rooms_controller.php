@@ -32,6 +32,7 @@ class RoomsController extends BaseController {
         // print("finish creating room");
         // get state: 1 -> create room succeeded, other -> error
         if ($room_state == 1) {
+            $this->folder = 'punishments';
             $this->render('add_punish_room_host');
         }
 
@@ -45,6 +46,7 @@ class RoomsController extends BaseController {
 
         $room_state = Room::find($room_password, $state);
         if ($room_state == 1) {
+            $this->folder = 'punishments';
             $this->render('add_punish_room_player');
         }
     }

@@ -3,7 +3,7 @@ class DB
 {
     private static $instance = NULL;
     private static $serverName = "172.27.0.1";
-    private static $dbName = "web_programming_project_20192";
+    private static $dbName = "midterm_db";
     private static $username = "root";
     private static $password = "root";
 
