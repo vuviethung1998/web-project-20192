@@ -52,34 +52,43 @@
         </form>
 
         <button id="about" class="aboutbutton">about</button>
-        <button id="rule" class="rulebutton" onclick="ruleButtonClick">
+        <button id="rule" class="rulebutton" onclick="ruleButtonClick()">
           rule
         </button>
       </div>
     </div>
-    <div id="ruleModal">
-      <span class="closeRule"> &times;</span>
-      <p class="rule-content">Write Rule here</p>
-    </div>
-    <div id="aboutModel">
-      <span id="closeAbout">&times;</span>
-      <p class="about-content">Write about here</p>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div>
+      </div>
     </div>
   </body>
 
   <script type="text/javascript">
-  var ruleModal = document.getElementById("ruleModal");
+    var ruleModal = document.getElementById("myModal");
     function ruleButtonClick() {
       ruleModal.style.display = "block";
       console.log("[RULE] RULE BUTTON CLICKED");
     }
     console.log("START PAGE");
-    var closeRule = document.getElementsByClassName("closeRule")[0];
-    closeRule.onClick = function () {
-      if (event.target == ruleModal) {
+    var closeRule = document.getElementsByClassName("close")[0];
+    function closeModal(){
+      ruleModal.style.display = "none";
+    }
+    window.onclick = function(event){
+      if(event.target == modal){
         ruleModal.style.display = "none";
-        console.log("[RULE] Button close clicked");
       }
-    };
+    }
   </script>
 </html>
