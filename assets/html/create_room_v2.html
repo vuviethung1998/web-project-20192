@@ -61,11 +61,23 @@
       <div class="modal-content">
         <div class="modal-header">
           <span class="close" onclick="closeModal()">&times;</span>
-          <h2>Modal Header</h2>
+          <h2 id = "modal-title">RULE</h2>
         </div>
         <div class="modal-body">
-          <p>Some text in the Modal Body</p>
-          <p>Some other text...</p>
+          <div>
+            <table id = "rule-table">
+              <tr>
+                <td class="rule-square" >Trừng phạt người bạn</td>
+                <td class="rule-square">Trừng phạt Hưng</td>
+                <td class="rule-square">Trừng phạt Giáp</td>
+              </tr>
+              <tr>
+                <td class="rule-square">Trừng phạt Nam</td>
+                <td class="rule-square">Trừng phạt Chỉnh</td>
+                <td class="rule-square">Trừng phạt ai đấy</td>
+              </tr>
+            </table>
+          </div>
         </div>
         <div class="modal-footer">
           <h3>Modal Footer</h3>
@@ -86,7 +98,7 @@
       ruleModal.style.display = "none";
     }
     window.onclick = function(event){
-      if(event.target == modal){
+      if(event.target == ruleModal){
         ruleModal.style.display = "none";
       }
     }
