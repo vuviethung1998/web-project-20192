@@ -51,56 +51,84 @@
           <button class="bbutton">create</button>
         </form>
 
-        <button id="about" class="aboutbutton">about</button>
+        <button id="about" class="aboutbutton" onclick="aboutButtonClick()">about</button>
         <button id="rule" class="rulebutton" onclick="ruleButtonClick()">
           rule
         </button>
       </div>
     </div>
-    <div id="myModal" class="modal">
+    <div id="ruleModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
           <span class="close" onclick="closeModal()">&times;</span>
-          <h2 id = "modal-title">RULE</h2>
+          <h2 id="modal-title">RULE</h2>
         </div>
         <div class="modal-body">
           <div>
-            <table id = "rule-table">
+            <table id="rule-table">
               <tr>
-                <td class="rule-square" >Trừng phạt người bạn</td>
-                <td class="rule-square">Trừng phạt Hưng</td>
-                <td class="rule-square">Trừng phạt Giáp</td>
+                <td class="rule-square" id="s1">Trừng phạt người bạn</td>
+                <td class="rule-square" id="s2">Trừng phạt Hưng</td>
+                <td class="rule-square" id="s3">Trừng phạt Giáp</td>
               </tr>
               <tr>
-                <td class="rule-square">Trừng phạt Nam</td>
-                <td class="rule-square">Trừng phạt Chỉnh</td>
-                <td class="rule-square">Trừng phạt ai đấy</td>
+                <td class="rule-square" id="s4">Trừng phạt Nam</td>
+                <td class="rule-square" id="s5">Trừng phạt Chỉnh</td>
+                <td class="rule-square" id="s6">Trừng phạt ai đấy</td>
               </tr>
             </table>
           </div>
         </div>
         <div class="modal-footer">
-          <h3>Modal Footer</h3>
+          <h3>Design by ..... team</h3>
+        </div>
+      </div>
+    </div>
+    <div id="aboutModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 id="modal-title">ABOUT</h2>
+        </div>
+        <div class="modal-body">
+          <div>
+            <table id="about-table">
+              <tr>
+                <img src=".\images\Chỉnh-cut.png" alt="Chinh" />
+              </tr>
+              <tr></tr>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <h3>Design by ..... team</h3>
         </div>
       </div>
     </div>
   </body>
 
   <script type="text/javascript">
-    var ruleModal = document.getElementById("myModal");
+    var ruleModal = document.getElementById("ruleModal");
+    var closeRule = document.getElementsByClassName("close")[0];
+    var aboutModal = document.getElementById("aboutModal");
     function ruleButtonClick() {
       ruleModal.style.display = "block";
       console.log("[RULE] RULE BUTTON CLICKED");
     }
+    function aboutButtonClick() {
+      aboutModal.style.display = "block";
+    }
     console.log("START PAGE");
-    var closeRule = document.getElementsByClassName("close")[0];
-    function closeModal(){
+
+    function closeModal() {
       ruleModal.style.display = "none";
+      aboutModal.style.display = "none";
     }
-    window.onclick = function(event){
-      if(event.target == ruleModal){
+    window.onclick = function (event) {
+      if (event.target == ruleModal) {
         ruleModal.style.display = "none";
+        aboutModal.style.display = "none";
       }
-    }
+    };
   </script>
 </html>
