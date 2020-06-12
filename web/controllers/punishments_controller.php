@@ -20,10 +20,10 @@ class PunishmentsController extends BaseController {
     $room_id = $_SESSION['room_id'];
 
     $player_name = $_POST['player_name'];
-    $player_role = 'player';
+    $player_role = 'host';
     $player_state = 'active';
 
-    $create_player_result = Player::create_player($player_name, $player_role, $player_state, $state);
+    $create_player_result = Player::create_player($player_name, $player_role, $player_state, $room_id, $state);
     if($create_player_result != 1) {
       print('The player name of host is duplicated!');
       return;

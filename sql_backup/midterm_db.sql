@@ -31,7 +31,7 @@ CREATE TABLE `player` (
   `player_id` int(11) NOT NULL,
   `player_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `player_role` enum('player','host') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `player_state` enum('inactive','active') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `player_state` enum('inactive','active', 'in_room', 'ready') COLLATE utf8mb4_unicode_ci NOT NULL,
   `room_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -99,7 +99,8 @@ INSERT INTO `punishment` (`punishment_id`, `room_id`, `punishment_content`, `typ
 
 CREATE TABLE `room` (
   `room_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `player_number` int(11) NOT NULL,
+  `player_number_now` int(11) NOT NULL,
+  `maximum_player_number` int(11) NOT NULL,
   `is_closed` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -107,20 +108,20 @@ CREATE TABLE `room` (
 -- Dumping data for table `room`
 --
 
-INSERT INTO `room` (`room_id`, `player_number`, `is_closed`) VALUES
-('1', 1, 0),
-('10', 2, 0),
-('123', 3, 0),
-('131354533', 2, 0),
-('13135463', 4, 0),
-('2', 2, 0),
-('3', 3, 0),
-('4', 4, 0),
-('5', 5, 0),
-('6', 6, 0),
-('7', 7, 0),
-('8', 8, 0),
-('9', 9, 0);
+INSERT INTO `room` (`room_id`, `player_number_now`, `maximum_player_number`, `is_closed`) VALUES
+('1', 1, 3, 0),
+('10', 1,  2, 0),
+('123', 1,  3, 0),
+('131354533', 1,  2, 0),
+('13135463', 1,  4, 0),
+('2', 1,  2, 0),
+('3', 1,  3, 0),
+('4', 1,  4, 0),
+('5', 1,  5, 0),
+('6', 1,  6, 0),
+('7', 1,  7, 0),
+('8', 1,  8, 0),
+('9', 1,  9, 0);
 
 -- --------------------------------------------------------
 
