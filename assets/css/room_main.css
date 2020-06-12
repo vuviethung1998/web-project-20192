@@ -11,6 +11,7 @@
     background-size: cover;
 
     overflow: scroll;
+    overflow-x: hidden;
     background-attachment: fixed;
 }
 
@@ -69,15 +70,19 @@ input[type=text] {
 }
 
 .startbutton {
-    position: relative;
+    position: fixed;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     background: none;
-    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #FC4C86;
     color: #FC4C86;
     display: inline-block;
     font-size: 75px;
     cursor: pointer;
     outline: none;
     text-align: center;
-    bottom: 150px;
+    top: 60px;
+    right: 100px;
 }

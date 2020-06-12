@@ -21,11 +21,12 @@ class Round {
 
     static function createRound($round_id, $round_num, $punishment_id, $player_id, $room_id) {
         $db = DB::getInstance();
-
-        // query to create Room
+          
+        // query to create Round
         $db->exec("INSERT INTO round(round_id, round_num, punishment_id, player_id, room_id) VALUES  
                         ( {$round_id},{$round_num},{$punishment_id}, {$player_id}, {$room_id} )");
         return 1;
+
     }
 
 }
