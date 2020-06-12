@@ -69,30 +69,6 @@
   </div>
   <div>
     <table id="table__general">
-      <?php
-          $i = 0;
-          print('<tr>');
-          foreach($players_in_room as $player) {
-            print('<td>');
-            print('<table id="table__list">');
-            print('<tr>');
-            print('<td class="imgborder">');
-            print('<img src="../../assets/images/icon.png" alt="Player" width="100" height="100">');
-            print('</td>');
-            print('</tr>');
-            print('<tr>');
-            print('<td class="text-room-main">' . $player['player_name'] . '</td>');
-            print('</tr>');
-            print('</table>');
-            print('</td>');
-            $i++;
-            if($i == 5) {
-              print('</tr>');
-              print('<tr>');
-              $i = 0;
-            }
-          }
-        ?>
     </table>
     <div class="title-room-main">
       <form action="" method="POST">
