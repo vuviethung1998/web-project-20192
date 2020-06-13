@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql:3306
--- Generation Time: Jun 10, 2020 at 03:50 AM
+-- Generation Time: Jun 13, 2020 at 08:18 PM
 -- Server version: 5.7.30
--- PHP Version: 7.4.5
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `player` (
   `player_id` int(11) NOT NULL,
   `player_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `player_role` enum('player','host') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `player_state` enum('inactive','active', 'in_room', 'ready') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `player_state` enum('inactive','active','in_room','ready') COLLATE utf8mb4_unicode_ci NOT NULL,
   `room_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -51,8 +51,7 @@ INSERT INTO `player` (`player_id`, `player_name`, `player_role`, `player_state`,
 -- (See below for the actual view)
 --
 CREATE TABLE `player_punishment_view` (
-`round_num` int(11)
-,`room_id` varchar(255)
+`room_id` varchar(255)
 ,`player_name` varchar(255)
 ,`punishment_content` varchar(255)
 );
@@ -110,18 +109,18 @@ CREATE TABLE `room` (
 
 INSERT INTO `room` (`room_id`, `player_number_now`, `maximum_player_number`, `is_closed`) VALUES
 ('1', 1, 3, 0),
-('10', 1,  2, 0),
-('123', 1,  3, 0),
-('131354533', 1,  2, 0),
-('13135463', 1,  4, 0),
-('2', 1,  2, 0),
-('3', 1,  3, 0),
-('4', 1,  4, 0),
-('5', 1,  5, 0),
-('6', 1,  6, 0),
-('7', 1,  7, 0),
-('8', 1,  8, 0),
-('9', 1,  9, 0);
+('10', 1, 2, 0),
+('123', 1, 3, 0),
+('131354533', 1, 2, 0),
+('13135463', 1, 4, 0),
+('2', 1, 2, 0),
+('3', 1, 3, 0),
+('4', 1, 4, 0),
+('5', 1, 5, 0),
+('6', 1, 6, 0),
+('7', 1, 7, 0),
+('8', 1, 8, 0),
+('9', 1, 9, 0);
 
 -- --------------------------------------------------------
 
@@ -131,7 +130,6 @@ INSERT INTO `room` (`room_id`, `player_number_now`, `maximum_player_number`, `is
 
 CREATE TABLE `round` (
   `round_id` int(11) NOT NULL,
-  `round_num` int(11) NOT NULL,
   `punishment_id` int(11) NOT NULL,
   `player_id` int(11) NOT NULL,
   `room_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -141,9 +139,9 @@ CREATE TABLE `round` (
 -- Dumping data for table `round`
 --
 
-INSERT INTO `round` (`round_id`, `round_num`, `punishment_id`, `player_id`, `room_id`) VALUES
-(1, 1, 6, 4, '131354533'),
-(2, 2, 6, 3, '131354533');
+INSERT INTO `round` (`round_id`, `punishment_id`, `player_id`, `room_id`) VALUES
+(1, 6, 4, '131354533'),
+(2, 6, 3, '131354533');
 
 -- --------------------------------------------------------
 
@@ -152,7 +150,7 @@ INSERT INTO `round` (`round_id`, `round_num`, `punishment_id`, `player_id`, `roo
 --
 DROP TABLE IF EXISTS `player_punishment_view`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `player_punishment_view`  AS  select `round`.`round_num` AS `round_num`,`room`.`room_id` AS `room_id`,`player`.`player_name` AS `player_name`,`punishment`.`punishment_content` AS `punishment_content` from (((`round` join `punishment` on((`round`.`punishment_id` = `punishment`.`punishment_id`))) join `room` on((`round`.`room_id` = `room`.`room_id`))) join `player` on((`round`.`player_id` = `player`.`player_id`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `player_punishment_view`  AS  select `room`.`room_id` AS `room_id`,`player`.`player_name` AS `player_name`,`punishment`.`punishment_content` AS `punishment_content` from (((`round` join `punishment` on((`round`.`punishment_id` = `punishment`.`punishment_id`))) join `room` on((`round`.`room_id` = `room`.`room_id`))) join `player` on((`round`.`player_id` = `player`.`player_id`))) ;
 
 --
 -- Indexes for dumped tables

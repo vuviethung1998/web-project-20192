@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../assets/css/skeleton.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/room.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/room_main.css" type="text/css"/>
+    <link rel="stylesheet" href="../../assets/css/result_page.css" type="text/css"/>
 </head>
 <body>
     <!-- Content -->
