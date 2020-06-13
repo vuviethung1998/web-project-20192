@@ -6,7 +6,7 @@
         <table style="margin:auto">
             <tr>
                 <td style="text-align: right; padding-bottom: 15px; padding-right: 10px" class="text">
-                    <p>password</p>
+                    <p>password </p>
                 </td>
                 <td>
                     <input type="text" name="room_password" />
@@ -21,7 +21,7 @@
                 </td>
             </tr>
         </table>
-        <button class="bbutton" type="submit" name="submit_create">create</button>
+        <button class="bbutton" type="submit" name="submit_create" onclick="ruleButtonClick()" >create</button>
     </form>
     <form
         action=""
@@ -33,6 +33,17 @@
         action=""
         method="POST"
     >
-        <button class="rulebutton">rule</button>
+        <button class="rulebutton" > rule</button>
     </form>
 </div>
+<?php
+    $state = include ('config/state.php');
+    $room_state = $_SESSION['room_state'];
+    $key =  array_search ($_SESSION['room_state'],  $state );
+
+    if (!empty($key) ) {
+        echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $key . "' );</script>";
+        echo "<script>alert('$key');</script>"; 
+    }
+    unset($_SESSION['room_state']);
+?>

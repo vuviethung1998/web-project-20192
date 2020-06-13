@@ -18,8 +18,11 @@
         <!-- <div class="title" >
             <p class="customfont" href="#">Punishhhh</p>
         </div> -->
-        <?= @$content ?>
+    <?= @$content ?>
     <!-- </div> -->
 <!-- Content end -->
+
 </body>
+
+
 </html>
