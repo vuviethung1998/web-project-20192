@@ -47,6 +47,12 @@ class Room
 
     static function find($room_password, $state)
     {
+        if (empty($room_password))  {
+            return 8; // check state.php to get error code
+        }
+        else if (!is_numeric($room_password)) {
+            return 10;
+        }
         // print("starting finding room");
         // print("Room password: " . $room_password);
         $db = DB::getInstance();
@@ -55,17 +61,12 @@ class Room
 
         $item = $req->fetch();
         // print_r($item);
-        if ($item != NULL )  {
-            // print('find room successfully');
-            return 1;
+        if ($item == NULL )  {
+            // print('room not found');
+            return 4;
         }
-        else if (empty($room_password)) {
-            return $state["Room password can't be blank!"];
-        }
-        else if (!is_int($room_password)) {
-            return $state["Room password must be number!"];
-        }
+        
 
-        return $state["Room not found"];
+        return 1; // find room successfully
     }
 }

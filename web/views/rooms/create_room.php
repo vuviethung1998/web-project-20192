@@ -24,7 +24,7 @@
                 </td>
             </tr>
         </table>
-        <button class="bbutton" type="submit" name="submit_create" onclick="ruleButtonClick()" >create</button>
+        <button class="bbutton" type="submit" name="submit_create" >create</button>
     </form>
     
     <button class="aboutbutton">about</button>

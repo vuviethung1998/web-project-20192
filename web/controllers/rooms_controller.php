@@ -53,18 +53,19 @@ class RoomsController extends BaseController {
         $room_password = htmlentities($_POST['room_password']);
         $state = include ('config/state.php');
 
-        $_SESSION['room_id'] = $room_password;
-
+    
         $room_state = Room::find($room_password, $state);
+
+        $_SESSION['room_id'] = $room_password;
+        $_SESSION['room_state'] = $room_state;
         if ($room_state == 1) {
             $this->folder = 'punishments';
             $this->render('add_punish_room_player');
         }
-        elseif ($room_state == 4) {
+        else {
+            echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $room_state . "' );</script>";
             $this->folder = 'rooms';
             $this->render('enter_room');
-            $_SESSION['room_state'] = $room_state;
-
         }
     }
 }
