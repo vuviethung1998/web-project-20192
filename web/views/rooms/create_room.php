@@ -1,4 +1,7 @@
 <div class="bg-create-room">
+    <form action="index.php?controller=pages&action=home" method="POST">
+        <button class="title-create-room">Punishhhh</button>
+      </form>
     <form action="index.php?controller=rooms&action=create_room" method="POST">
         <div class="text-create-room" >
             <p style="font-size: 8vw">create room</p>
@@ -23,18 +26,40 @@
         </table>
         <button class="bbutton" type="submit" name="submit_create" onclick="ruleButtonClick()" >create</button>
     </form>
-    <form
-        action=""
-        method="POST"
-    >
-        <button class="aboutbutton">about</button>
-    </form>
-    <form
-        action=""
-        method="POST"
-    >
-        <button class="rulebutton" > rule</button>
-    </form>
+    
+    <button class="aboutbutton">about</button>
+    
+    <button class="rulebutton"  onclick="ruleButtonClick()"> rule</button>
+
+    <!-- popup rule -->
+    <div id="ruleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 id="modal-title">RULE</h2>
+        </div>
+        <div class="modal-body">
+          <div>
+            <table id="rule-table">
+              <tr>
+                <td class="rule-square" id="s1">Trừng phạt người bạn</td>
+                <td class="rule-square" id="s2">Trừng phạt Hưng</td>
+                <td class="rule-square" id="s3">Trừng phạt Giáp</td>
+              </tr>
+              <tr>
+                <td class="rule-square" id="s4">Trừng phạt Nam</td>
+                <td class="rule-square" id="s5">Trừng phạt Chỉnh</td>
+                <td class="rule-square" id="s6">Trừng phạt ai đấy</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <h3>Design by ..... team</h3>
+        </div>
+      </div>
+    </div>
+
 </div>
 <?php
     $state = include ('config/state.php');
