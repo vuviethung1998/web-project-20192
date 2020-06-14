@@ -21,17 +21,19 @@ class RoomsController extends BaseController {
 
         $state = include ('config/state.php');
         $room_password = $_POST['room_password'];
-        $player_num = $_POST['player_num'];
-        $max_player_num = $arr['max_num_players'];
+        $maximum_player_num = $_POST['player_num'];
+        $maximum_player_number_in_config = $arr['max_num_players'];
         $is_closed = 0;
+        $player_number_now = 1;
         // print("start creating room");
-        $room_state = Room::createRoom($room_password, $player_num, $max_player_num, $is_closed, $state);
+        $room_state = Room::createRoom($room_password, $player_number_now, $maximum_player_num, $maximum_player_number_in_config, $is_closed, $state);
 
         $_SESSION['room_id'] = $room_password;
 
         // print("finish creating room");
         // get state: 1 -> create room succeeded, other -> error
         if ($room_state == 1) {
+            $this->folder = 'punishments';
             $this->render('add_punish_room_host');
         }
 
@@ -43,9 +45,14 @@ class RoomsController extends BaseController {
 
         $_SESSION['room_id'] = $room_password;
 
-        $room_state = Room::find($room_password, $state);
-        if ($room_state == 1) {
-            $this->render('add_punish_room_player');
+        $found_room = Room::find($room_password, $state);
+        if ($found_room) {
+            // print_r($found_room);
+            $enter_room_result = Room::update_a_player_in_room($room_password, $state);
+            if($enter_room_result == 1) {
+                $this->folder = 'punishments';
+                $this->render('add_punish_room_player');
+            }
         }
     }
 }
