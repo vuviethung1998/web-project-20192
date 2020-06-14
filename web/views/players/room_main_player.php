@@ -11,12 +11,14 @@
     // while (oldTable.hasChildNodes()) {
     //   oldTable.removeChild(oldTable.childNodes[0]);
     // }
+
     var table = document.getElementById('table__general');
     while (table.hasChildNodes()) {
       table.removeChild(table.childNodes[0]);
     }
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
+
+    var xhttpGetPlayers = new XMLHttpRequest();
+    xhttpGetPlayers.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         players = JSON.parse(this.responseText);
         console.log(players);
@@ -54,8 +56,24 @@
         table.rows[trIndex].deleteCell(table.rows[trIndex].cells.length-1);
       }
     };
-    xhttp.open("POST", "../../ajax/getPlayers.php?room_id=" + room_id, false);
-    xhttp.send();
+    xhttpGetPlayers.open("POST", "../../ajax/getPlayers.php?room_id=" + room_id, true);
+    xhttpGetPlayers.send();
+
+    var xhttpIsRoomStarted = new XMLHttpRequest();
+    xhttpIsRoomStarted.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var response = JSON.parse(this.responseText);
+        console.log(response);
+        console.log(response['is_closed']);
+        var isRoomStart = parseInt(response['is_closed']);
+        console.log(typeof(isRoomStart));
+        if(isRoomStart) {
+          location.replace("http://localhost:8082/index.php?controller=rounds&action=renderResultPagePlayer")
+        }
+      }
+    }
+    xhttpIsRoomStarted.open("POST", "../../ajax/getIsRoomStarted.php?room_id=" + room_id, true);
+    xhttpIsRoomStarted.send();
   }, 3000);
 </script>
 <div class="bg-room-main">

@@ -14,7 +14,7 @@
     background-attachment: scroll;
 }
 
-.title {
+.title-result-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
     background: none;    
 }
 
-.text {
+.text-result-page {
     font-size: 32px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;

@@ -31,6 +31,40 @@ class Punishment {
     else return $state['Failed to add punishments!'];
   }
 
+  
+  function findPunishmentById($punishment_id, $state) {
+    $db = DB::getInstance();
+
+    $find_punishment_by_id_query = "SELECT * FROM punishment WHERE punishment_id='$punishment_id'";
+    try {
+      $punishment_found = $db->query($find_punishment_by_id_query);
+    }
+    catch(PDOException $e) {
+      print($e->getMessage());
+      return $state['Punishment is not found'];
+    }
+    return $punishment_found->fetch();
+  }
+
+  function chooseRandomPunishment($room_id, $state) {
+    $db = DB::getInstance();
+    
+    $punishment_random_query = "SELECT * FROM punishment WHERE room_id = $room_id";
+    try {
+      $punishment_random_result = $db->query($punishment_random_query);
+    }
+    catch(PDOException $e) {
+      print($e->getMessage());
+    }
+    $punishment_random_result = $punishment_random_result->fetchAll();
+    // print(gettype($punishment_random_result));
+    // print(is_array($punishment_random_result));
+    // print(count($punishment_random_result));
+    // print_r($punishment_random_result);
+    $random_num = rand(0, count($punishment_random_result)-1);
+    return $punishment_random_result[$random_num];
+  }
+
 }
 
 ?>

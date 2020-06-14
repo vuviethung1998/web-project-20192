@@ -60,7 +60,7 @@
 </script>
 <div class="bg-room-main">
   <div class="title-room-main">
-    <form action="intro_room_v3.html" method="POST">
+    <form action="index.php" method="POST">
       <button class="title__button">let's punishhh now!!!</button>
     </form>
   </div>
@@ -71,7 +71,7 @@
     <table id="table__general">
     </table>
     <div class="title-room-main">
-      <form action="" method="POST">
+      <form action="index.php?controller=rounds&action=renderResultPageHost" method="POST">
         <button class="startbutton">start</button>
       </form>
     </div>
