@@ -46,6 +46,14 @@ input[type=text] {
     font-size: 3vw;
     color: #FC4C86;
 }
+input[type=text].error {
+    border:1px solid red;
+}
+input:focus{
+    border: none;
+    border-color: transparent;
+}
+  
 #table1 {
   border-collapse: separate;
   border-spacing: 50px 10px;

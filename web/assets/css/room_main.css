@@ -1,4 +1,4 @@
-.bg {
+.bg-room-main {
     /* The image used */
     background-image: url("../images/ui4.png");
 
@@ -29,7 +29,7 @@
     background: none;    
 }
 
-.text {
+.text-room-main {
     font-size: 32px;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
     color: #FC4C86;
