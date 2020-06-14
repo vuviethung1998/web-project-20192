@@ -22,16 +22,20 @@ class Player {
 
     $req = $db->prepare($create_punish_query);
     try {
-      if($req->execute(array(':player_name' => $player_name, 
+      if (empty($player_name)) {
+        return $state['Player name is empty string'];
+      }
+      else if($req->execute(array(':player_name' => $player_name, 
         ':player_role' => $player_role, 
         ':player_state' => $player_state, 
         ':room_id' => $room_id))) {
         return 1;
       }
-      else return $state['Failed to add players!'];
+      
+      return $state['Player name of host is duplicated!'];
     }
     catch (PDOException $e) {
-      // echo "Error: " . $e->getMessage() . "<br />\n";
+      echo "Error: " . $e->getMessage() . "<br />\n";
     }
   }
 
@@ -57,6 +61,31 @@ class Player {
     $find_players_in_room_query = "SELECT player_name FROM player WHERE room_id='$room_id'";
     $players_in_room = $db->query($find_players_in_room_query);
     return $players_in_room->fetchAll();
+  }
+
+  function findPlayerById($player_id, $state) {
+    $db = DB::getInstance();
+
+    $find_players_by_id_query = "SELECT * FROM player WHERE player_id='$player_id'";
+    try {
+      $player_found = $db->query($find_players_by_id_query);
+    }
+    catch(PDOException $e) {
+      print($e->getMessage());
+      return $state['Player is not found'];
+    }
+    return $player_found->fetch();
+  }
+
+  function chooseRandomPlayer($room_id, $state) {
+    $db = DB::getInstance();
+
+    $find_players_in_room_query = "SELECT * FROM player WHERE room_id='$room_id'";
+    $players_in_room = $db->query($find_players_in_room_query)->fetchAll();
+    
+    $random_num = rand(0, count($players_in_room)-1);
+
+    return $players_in_room[$random_num];
   }
 
 }

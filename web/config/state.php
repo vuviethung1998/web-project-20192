@@ -10,5 +10,9 @@ return array(
     "Room password can\'t be blank!" => 8,
     "Player number can\'t be blank!" => 9,
     'Room password must be number!' => 10,
-    'Room number player must be number!' => 11
+    'Room number player must be number!' => 11,
+    'Room is full!' => 12,
+    'Player name is empty string' => 13,
+    'Player name of host is duplicated!' =>14
+
 );

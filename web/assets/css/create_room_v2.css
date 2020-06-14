@@ -200,3 +200,33 @@ input[type=text] {
 #about-table{
     width: 100%;
 }
+
+.teamName {
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  font-family: "SVNLifehack Sans", Verdana, Tahoma;
+}
+.teamName:hover {
+  color: white;
+}
+.avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about-body {
+  
+}
+#p1 {
+  background-color: #99ff00;
+}
+#p2 {
+  background-color: #ffcc33;
+}
+#p3 {
+  background-color: #3333ff;
+}
+#p4 {
+  background-color: red;
+}

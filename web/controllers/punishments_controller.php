@@ -2,6 +2,8 @@
 require_once('controllers/base_controller.php');
 require_once('models/punishment.php');
 require_once('models/player.php');
+require_once('models/room.php');
+
 
 class PunishmentsController extends BaseController {
 
@@ -19,23 +21,23 @@ class PunishmentsController extends BaseController {
     
     $room_id = $_SESSION['room_id'];
 
-    $player_name = htmlentities($_POST['player_name']);
-    $player_role = 'player';
+    $player_name = $_POST['player_name'];
+    $player_role = 'host';
     $player_state = 'active';
 
-    $create_player_result = Player::create_player($player_name, $player_role, $player_state, $state);
-    if($create_player_result != 1) {
-      print('The player name of host is duplicated!');
-      return;
+    $create_player_result = Player::create_player($player_name, $player_role, $player_state, $room_id, $state);
+    $_SESSION['player_state'] = $create_player_result;
+    if($create_player_result == 1) {
+      $enter_room_result = Room::update_a_player_in_room($room_id, $state);
     }
 
     $_SESSION['player_name'] = $player_name;
 
-    $funny_punishment = htmlentities($_POST['funny_punishment']);
+    $funny_punishment = $_POST['funny_punishment'];
     // print($funny_punishment);
-    $interesting_punishment = htmlentities($_POST['interesting_punishment']);
+    $interesting_punishment = $_POST['interesting_punishment'];
     // print($interesting_punishment);
-    $dangerous_punishment = htmlentities($_POST['dangerous_punishment']);
+    $dangerous_punishment = $_POST['dangerous_punishment'];
     // print($dangerous_punishment);
 
     $punishment_array = array('funny_punishment' => $funny_punishment, 
@@ -44,12 +46,14 @@ class PunishmentsController extends BaseController {
 
     $create_punishment_result = PunishmentsController::create_three_types_of_punishments($punishment_array, $room_id, $state);
 
-    if($create_punishment_result) {
+    if($create_punishment_result == 1 && $create_player_result == 1) {
       $this->folder = 'players';
       $this->render('room_main_host');
     }
     else {
-      print("error");
+      echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $create_player_result . "' );</script>";
+      $this->folder = 'punishments';
+      $this->render('add_punish_room_host');
     }
   }
 
@@ -59,23 +63,24 @@ class PunishmentsController extends BaseController {
     
     $room_id = $_SESSION['room_id'];
     
-    $player_name = htmlentities($_POST['player_name']);
+    $player_name = $_POST['player_name'];
     $player_role = 'player';
     $player_state = 'active';
 
     $create_player_result = Player::create_player($player_name, $player_role, $player_state, $room_id, $state);
-    if($create_player_result != 1) {
-      print('The player name is duplicated!');
-      return;
+    $_SESSION['player_state'] = $create_player_result;
+    
+    if($create_player_result == 1) {
+      $enter_room_result = Room::update_a_player_in_room($room_id, $state);
     }
 
     $_SESSION['player_name'] = $player_name;
 
-    $funny_punishment = htmlentities($_POST['funny_punishment']);
+    $funny_punishment = $_POST['funny_punishment'];
     // print($funny_punishment);
-    $interesting_punishment = htmlentities($_POST['interesting_punishment']);
+    $interesting_punishment = $_POST['interesting_punishment'];
     // print($interesting_punishment);
-    $dangerous_punishment = htmlentities($_POST['dangerous_punishment']);
+    $dangerous_punishment = $_POST['dangerous_punishment'];
     // print($dangerous_punishment);
 
     $punishment_array = array('funny_punishment' => $funny_punishment, 
@@ -84,7 +89,8 @@ class PunishmentsController extends BaseController {
 
     $create_punishment_result = PunishmentsController::create_three_types_of_punishments($punishment_array, $room_id, $state);
 
-    if($create_punishment_result) {
+  
+    if($create_punishment_result == 1 && $create_player_result == 1) {
 
       $players_in_room = Player::find_players_in_room($room_id);
 
@@ -92,7 +98,9 @@ class PunishmentsController extends BaseController {
       $this->render('room_main_player');
     }
     else {
-      print("error");
+      echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $create_player_result . "' );</script>";
+      $this->folder = 'punishments';
+      $this->render('add_punish_room_player');
     }
   }
 
@@ -110,13 +118,13 @@ class PunishmentsController extends BaseController {
     if($create_funny_punishment_result == 1 &&
       $create_interesting_punishment_result == 1 &&
       $create_dangerous_punishment_result == 1) {
-        return true;
+        return 1;
       }
     else {
       print($create_funny_punishment_result);
       print($create_interesting_punishment_result);
       print($create_dangerous_punishment_result);
-      return false;
+      return 0;
     }
 
   }
