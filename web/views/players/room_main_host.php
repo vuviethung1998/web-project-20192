@@ -71,7 +71,7 @@
     <table id="table__general">
     </table>
     <div class="title-room-main">
-      <form action="index.php?controller=rounds&action=renderResultPage" method="POST">
+      <form action="index.php?controller=rounds&action=renderResultPageHost" method="POST">
         <button class="startbutton">start</button>
       </form>
     </div>

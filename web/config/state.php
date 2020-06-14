@@ -7,5 +7,6 @@ return array(
     'Failed to add punishments' => 6,
     'Failed to add players' => 7,
     'Player is not found' => 8,
-    'Punishment is not found' => 9
+    'Punishment is not found' => 9,
+    'Fail to close room' => 10
 );

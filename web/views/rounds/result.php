@@ -7,7 +7,7 @@
   $room_id = $_SESSION['room_id'];
 
   $result_data = Round::findRoundById($room_id, $state);
-  $result_data = $result_data[0];
+  // print($result_data);
 
   $player_id = $result_data['player_id'];
   $player = Player::findPlayerById($player_id, $state);

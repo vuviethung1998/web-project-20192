@@ -44,6 +44,7 @@ class Round
         $round_create_query = "INSERT INTO round(punishment_id, player_id, room_id) VALUES ($random_punishment_id, $random_player_id, $room_id)";
         try {
           $round_create_result = $db->query($round_create_query);
+          return 1;
         }
         catch(PDOException $e) {
           print($e->getMessage());
@@ -60,15 +61,16 @@ class Round
       $find_round_query = "SELECT * FROM `round` WHERE room_id = {$room_id}";
 
       try {
-        $room_existed_result = $db->query($find_round_query);
+        $find_round_result = $db->query($find_round_query);
       }
       catch(PDOException $e) {
         print($e->getMessage());
+        return $state['Round not found'];
       }
-      $room_existed_result = $room_existed_result->fetchAll();
-      // print_r($room_existed_result);
-      if(count($room_existed_result) > 0) {
-        return $room_existed_result;
+      $find_round_result = $find_round_result->fetch();
+      // print_r($find_round_result);
+      if($find_round_result) {
+        return $find_round_result;
       }
       return $state['Round not found'];
     }

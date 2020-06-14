@@ -61,4 +61,16 @@ class Room
         }
         return 1;
     }
+    function closingRoom($room_id, $state) {
+        $db = DB::getInstance();
+        $update_room_query = "UPDATE room SET is_closed=1 WHERE room_id=$room_id";
+        try {
+            $req = $db->exec($update_room_query);
+        }
+        catch(PDOException $e) {
+            print($e->getMessage());
+            return $state['Fail to close room'];
+        }
+        return 1;
+    }
 }
