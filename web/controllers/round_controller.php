@@ -21,6 +21,7 @@ class RoundController extends BaseController {
         $punishments_list = $punishments_list_query->fetchAll();
         if (count($punishments_list) > 0) {
             $punishments_id = array_rand(array($punishments_list),1);
+            print $punishments_id;
         }
         $player_list_query = $db->query("SELECT player_id FROM player as pl WHERE pl.room_id = {$room_id}");
         $players_list = $player_list_query->fetchAll();
@@ -35,5 +36,12 @@ class RoundController extends BaseController {
             $this->render('result');   
             $round_num++;         
         }
+    }
+    public function end_round() {
+        $room_id = $_POST['room_id'];
+        $player_role_query = $db->query("SELECT player_role, player_id FROM player as pl WHERE pl.room_id = {$room_id}");
+        $players_role_list = $player_role_query->fetchAll();       
+// if role == host, render main_room_host
+// else render main_room
     }
 }
