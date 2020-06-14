@@ -1,11 +1,13 @@
 version: "3.2"
 services:
+  
   php:
-    build: "./"
+    build: "./php/"
     networks:
       - backend
     volumes:
       - ./web/:/var/www/html/
+
   apache:
     build: "./apache/"
     depends_on:
@@ -14,9 +16,40 @@ services:
       - frontend
       - backend
     ports:
-      - "8080:80"
+      - "8082:80"
     volumes:
       - ./web/:/var/www/html/
+
+  mysql:
+      image: mysql:5.7
+      container_name: dev_mysql
+      ports: 
+          - 3306:3306
+      networks:
+        - frontend
+        - backend
+      environment:
+          MYSQL_USER: user
+          MYSQL_PASSWORD: user
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: default_schema
+
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin:latest
+      container_name: dev_pma
+      links:
+          - mysql
+      environment:
+          PMA_HOST: mysql
+          PMA_PORT: 3306
+          PMA_ARBITRARY: 1
+      restart: always
+      ports:
+          - 8183:80
+      networks:
+        - frontend
+        - backend
+
 networks:
   frontend:
   backend:

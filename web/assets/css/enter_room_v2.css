@@ -1,0 +1,63 @@
+.bg-enter-room {
+    /* The image used */
+    background-image: url("../images/ui2.png");
+
+    /*Full height*/ 
+    height: 100%;
+
+    /*Center and scale the image nicely*/ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*  background: url(../images/ui1.png) no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      overflow: hidden;*/
+
+}
+
+.title {
+    height: 120px;
+    padding-top: 60px;
+    font-size: 10vw;
+    font-family: "SVNNew Athletic M54", Verdana, Tahoma; 
+    color: #49CED9;
+    margin-left: 28%;
+    margin-bottom: 50px;
+}
+
+.text {
+    font-size: 5vw;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    color: #FC4C86;
+    margin-left: 39%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #FC4C86;
+    border-radius: 15px;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    color: #FC4C86;
+}
+
+
+.abutton {
+    position: fixed;
+    width: 300px;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma; 
+    background: none;
+    border: 5px dashed #CCCCCC;
+    border-radius: 15px;
+    color: #FC4C86;
+    display: inline-block;
+    font-size: 75px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 3%;
+    padding-bottom: 15px;
+}
