@@ -1,31 +1,14 @@
-<?php
-  require_once('controllers/rounds_controller.php');
-  require_once('controllers/players_controller.php');
-  require_once('controllers/punishments_controller.php');
+<html>
+  <head>
+    <title>Punishhhh</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/result_page.css" />
+    <link rel="stylesheet" href="../css/skeleton.css" />
+  </head>
 
-  $state = include ('config/state.php');
-  $room_id = $_SESSION['room_id'];
-
-  $result_data = RoundsController::getRound($room_id, $state);
-  // print($result_data);
-
-  $player_id = $result_data['player_id'];
-  $player = PlayersController::get_player($player_id, $state);
-  // print_r($player);
-  // print($player['player_name']);
-  $player_name = $player['player_name'];
-
-  $punishment_id = $result_data['punishment_id'];
-  $punishment = PunishmentsController::getPunishment($punishment_id, $state);
-  // print_r($punishment);
-  // print($punishment['punishment_content']);
-  $punishment_content = $punishment['punishment_content'];
-
-  // print_r($result_data);
-  // print($player_id);
-  // print($punishment_id);
-?>
-<div class="bg-result-page">
+  <body>
+    <div class="bg">
       <div
         style="
           margin: 130px 400px;
@@ -35,10 +18,10 @@
           border-radius: 200px;
         "
       >
-        <div class="text-result-page" style="border: none;">
+        <div class="text" style="border: none;">
           <p style="font-size: 64px;">tada!!!</p>
         </div>
-        <div class="text-result-page" style="border: none; padding-top: 20px;">
+        <div class="text" style="border: none; padding-top: 20px;">
           here comes the punishment for ~
         </div>
         <div
@@ -50,7 +33,7 @@
             border-radius: 15px;
             margin-top: 20px;
           "
-        ><p class="text-result-page" style="border: 0px;"><?php print($player_name) ?></p></div>
+        ></div>
         <div
           style="
             margin: auto;
@@ -60,7 +43,7 @@
             border-radius: 15px;
             margin-top: 20px;
           "
-        ><p class="text-result-page" style="border: 0px;"><?php print($punishment_content) ?></p></div>
+        ></div>
         <table>
           <tr>
             <form action="room_main_player.html" method="POST">
@@ -94,3 +77,5 @@
         </table>
       </div>
     </div>
+  </body>
+</html>
