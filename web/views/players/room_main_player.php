@@ -79,7 +79,7 @@
 <div class="bg-room-main">
   <div class="title-room-main">
     <form>
-      <button class="title__button">let's punishhh now!!!</button>
+      <p class="title__button">let's punishhh now!!!</p>
     </form>
   </div>
   <div class="passroom">

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../assets/css/room.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/room_main.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/result_page.css" type="text/css"/>
+    <link rel="stylesheet" href="../../assets/css/clock.css" type="text/css"/>
 </head>
 <body>
     <!-- Content -->
@@ -26,5 +27,5 @@
 </body>
 
 <script type="text/javascript" src="../../assets/js/popup.js"></script> 
-
+<script type="text/javascript" src="../../assets/js/clock.js"></script> 
 </html>

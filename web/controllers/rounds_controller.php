@@ -18,7 +18,11 @@ class RoundsController extends BaseController {
       // print($closing_room_result);
       if($create_round_result != NULL && $closing_room_result == 1) {
         $this->render('result');
+        // sleep(60);
+        // $this->folder = 'players';
+        // $this->render('room_main_host');
       }
+      
     }
 
     function renderResultPagePlayer() {
@@ -26,6 +30,10 @@ class RoundsController extends BaseController {
       $room_id = $_SESSION['room_id'];
 
       $this->render('result');
+
+        // sleep(60);
+        // $this->folder = 'players';
+        // $this->render('room_main_player');
     }
 
     function getRound($room_id, $state) {
