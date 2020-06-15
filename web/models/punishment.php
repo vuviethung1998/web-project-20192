@@ -76,7 +76,7 @@ class Punishment {
       return $state['Punishment is not found'];
     }
     return $punishment_found->fetch();
-  }
+
 
   function chooseRandomPunishment($room_id, $state) {
     $db = DB::getInstance();
@@ -97,5 +97,4 @@ class Punishment {
     return $punishment_random_result[$random_num];
   }
 
-}
 ?>

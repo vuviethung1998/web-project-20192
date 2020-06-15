@@ -215,9 +215,6 @@ input[type=text] {
   margin-left: auto;
   margin-right: auto;
 }
-#about-body {
-  
-}
 #p1 {
   background-color: #99ff00;
 }
@@ -231,7 +228,7 @@ input[type=text] {
   background-color: red;
 }
 .pop-up{
-    display: block; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     margin: auto;

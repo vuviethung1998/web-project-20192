@@ -80,7 +80,7 @@
     $room_state = $_SESSION['room_state'];
     $key =  array_search ($_SESSION['room_state'],  $state );
 
-    if (!empty($key) ) {
+    if (!empty($key) && $key != 1) {
       echo '<div id = "errorPopup" class = "pop-up">
       <div class = "pop-up-content">
         <div class = "pop-up-header">
