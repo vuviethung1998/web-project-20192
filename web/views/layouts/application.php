@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../assets/css/skeleton.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/room.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/room_main.css" type="text/css"/>
-    <link rel="stylesheet" href="../../assets/css/result_page.css" type="text/css"/>
 </head>
 <body>
     <!-- Content -->
@@ -19,8 +18,12 @@
         <!-- <div class="title" >
             <p class="customfont" href="#">Punishhhh</p>
         </div> -->
-        <?= @$content ?>
+    <?= @$content ?>
     <!-- </div> -->
 <!-- Content end -->
+
 </body>
+
+<script type="text/javascript" src="../../assets/js/popup.js"></script> 
+
 </html>

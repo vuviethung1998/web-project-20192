@@ -20,39 +20,56 @@ class RoomsController extends BaseController {
         $arr = include ('config/config.php');
 
         $state = include ('config/state.php');
-        $room_password = $_POST['room_password'];
-        $maximum_player_num = $_POST['player_num'];
+        $room_password = html_entities($_POST['room_password']);
+        $maximum_player_num = html_entities($_POST['player_num']);
         $maximum_player_number_in_config = $arr['max_num_players'];
         $is_closed = 0;
-        $player_number_now = 1;
+        $player_number_now = 0;
         // print("start creating room");
         $room_state = Room::createRoom($room_password, $player_number_now, $maximum_player_num, $maximum_player_number_in_config, $is_closed, $state);
 
         $_SESSION['room_id'] = $room_password;
+        $_SESSION['room_state'] = $room_state;
 
         // print("finish creating room");
         // get state: 1 -> create room succeeded, other -> error
         if ($room_state == 1) {
             $this->folder = 'punishments';
             $this->render('add_punish_room_host');
+        } else {
+            $this->folder = 'rooms';
+            // // lay state cua room
+            
+            //render trang 
+           $this->render('create_room');
+            // $key =  array_search($room_state,  $state );
+//            echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $room_state . "' );</script>";
+            // unset($_SESSION['room_state']);
+            // $this->function_alert($key);
         }
 
     }
 
     public function enter_room() {
-        $room_password = $_POST['room_password'];
+        $arr = include ('config/config.php');
         $state = include ('config/state.php');
 
-        $_SESSION['room_id'] = $room_password;
+        $maximum_player_number_in_config = $arr['max_num_players'];
+        $room_password = htmlentities(html_entities($_POST['room_password']));
 
-        $found_room = Room::find($room_password, $state);
-        if ($found_room) {
-            // print_r($found_room);
-            $enter_room_result = Room::update_a_player_in_room($room_password, $state);
-            if($enter_room_result == 1) {
-                $this->folder = 'punishments';
-                $this->render('add_punish_room_player');
-            }
+    
+        $room_state = Room::find($room_password,  $maximum_player_number_in_config, $state);
+
+        $_SESSION['room_id'] = $room_password;
+        $_SESSION['room_state'] = $room_state;
+        if ($room_state == 1) {
+            $this->folder = 'punishments';
+            $this->render('add_punish_room_player');
+        }
+        else {
+            echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $room_state . "' );</script>";
+            $this->folder = 'rooms';
+            $this->render('enter_room');
         }
     }
 }

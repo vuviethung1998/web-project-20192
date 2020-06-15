@@ -22,13 +22,17 @@ class Player {
 
     $req = $db->prepare($create_punish_query);
     try {
-      if($req->execute(array(':player_name' => $player_name, 
+      if (empty($player_name)) {
+        return $state['Player name is empty string'];
+      }
+      else if($req->execute(array(':player_name' => $player_name, 
         ':player_role' => $player_role, 
         ':player_state' => $player_state, 
         ':room_id' => $room_id))) {
         return 1;
       }
-      else return $state['Failed to add players!'];
+      
+      return $state['Player name of host is duplicated!'];
     }
     catch (PDOException $e) {
       echo "Error: " . $e->getMessage() . "<br />\n";
