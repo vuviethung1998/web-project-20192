@@ -86,7 +86,19 @@
         </div>
       </div>
     </div>
-    <div id="aboutModal" class="modal">
+
+    <div id = "errorPopup" class = "pop-up">
+      <div class = "pop-up-content">
+        <div class = "pop-up-header">
+          <h2 id="pop-up-title">ERROR</h2>
+        </div>
+        <div class = "pop-up-body">
+          <p id = "error-message">Print Error here </p>
+          <div id = "button"><button type = "button" class = "pop-up-button" onclick = "closePopUpClick()"> Okay! </button></div>
+        </div> 
+      </div>
+    </div>
+    <div id ="aboutModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
           <span class="close" onclick="closeModal()">&times;</span>
@@ -161,9 +173,14 @@
     var ruleModal = document.getElementById("ruleModal");
     var closeRule = document.getElementsByClassName("close")[0];
     var aboutModal = document.getElementById("aboutModal");
+    var errorPopup = document.getElementById("errorPopup");
     function ruleButtonClick() {
-      ruleModal.style.display = "table";
-      console.log("[RULE] RULE BUTTON CLICKED");
+      // ruleModal.style.display = "table";
+      // console.log("[RULE] RULE BUTTON CLICKED");
+      errorPopup.style.display = "block";
+    }
+    function closePopUpClick(){
+      errorPopup.style.display = "none";
     }
     function aboutButtonClick() {
       aboutModal.style.display = "block";

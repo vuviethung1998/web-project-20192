@@ -23,8 +23,8 @@ services:
   mysql:
       image: mysql:5.7
       container_name: dev_mysql
-      ports: 
-          - 3306:3306
+      # ports: 
+      #     - 3306:3306
       networks:
         - frontend
         - backend

@@ -59,7 +59,27 @@
         </div>
       </div>
     </div>
+    <?php
+    $state = include ('config/state.php');
+    $room_state = $_SESSION['room_state'];
+    $key =  array_search ($_SESSION['room_state'],  $state );
 
+    if (!empty($key) ) {
+      echo '<div id = "errorPopup" class = "pop-up">
+      <div class = "pop-up-content">
+        <div class = "pop-up-header">
+          <h2 id="pop-up-title">ERROR</h2>
+        </div>
+        <div class = "pop-up-body">
+          <p id = "error-message">'. $key. '</p>
+          <div id = "button"><button type = "button" class = "pop-up-button" onclick = "closePopUpClick()"> Okay! </button></div>
+        </div> 
+      </div>
+    </div>';
+    }
+    unset($_SESSION['room_state']);
+    
+    ?>
     <div id="aboutModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

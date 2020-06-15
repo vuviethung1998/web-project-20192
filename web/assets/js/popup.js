@@ -20,3 +20,8 @@ window.onclick = function (event) {
     aboutModal.style.display = "none";
     }
 };
+
+var errorPopup = document.getElementById("errorPopup");
+function closePopUpClick(){
+    errorPopup.style.display = "none";
+}
