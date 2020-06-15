@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../../assets/css/room_main.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/result_page.css" type="text/css"/>
     <link rel="stylesheet" href="../../assets/css/clock.css" type="text/css"/>
+    <link rel="stylesheet" href="../../assets/css/popup.css" type="text/css"/>
+
 </head>
 <body>
     <!-- Content -->
