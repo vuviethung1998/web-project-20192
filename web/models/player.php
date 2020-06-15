@@ -31,7 +31,7 @@ class Player {
       else return $state['Failed to add players!'];
     }
     catch (PDOException $e) {
-      echo "Error: " . $e->getMessage() . "<br />\n";
+      // echo "Error: " . $e->getMessage() . "<br />\n";
     }
   }
 

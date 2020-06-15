@@ -65,4 +65,10 @@ class BaseController
           header('Location: home.php?controller=pages&action=error');
         }
       }
+
+      function function_alert($message) { 
+        // Display the alert box  
+        echo "<script>alert('$message');</script>"; 
+      } 
+      
     }

@@ -19,11 +19,11 @@ class PunishmentsController extends BaseController {
     
     $room_id = $_SESSION['room_id'];
 
-    $player_name = $_POST['player_name'];
-    $player_role = 'host';
+    $player_name = htmlentities($_POST['player_name']);
+    $player_role = 'player';
     $player_state = 'active';
 
-    $create_player_result = Player::create_player($player_name, $player_role, $player_state, $room_id, $state);
+    $create_player_result = Player::create_player($player_name, $player_role, $player_state, $state);
     if($create_player_result != 1) {
       print('The player name of host is duplicated!');
       return;
@@ -31,11 +31,11 @@ class PunishmentsController extends BaseController {
 
     $_SESSION['player_name'] = $player_name;
 
-    $funny_punishment = $_POST['funny_punishment'];
+    $funny_punishment = htmlentities($_POST['funny_punishment']);
     // print($funny_punishment);
-    $interesting_punishment = $_POST['interesting_punishment'];
+    $interesting_punishment = htmlentities($_POST['interesting_punishment']);
     // print($interesting_punishment);
-    $dangerous_punishment = $_POST['dangerous_punishment'];
+    $dangerous_punishment = htmlentities($_POST['dangerous_punishment']);
     // print($dangerous_punishment);
 
     $punishment_array = array('funny_punishment' => $funny_punishment, 
@@ -59,7 +59,7 @@ class PunishmentsController extends BaseController {
     
     $room_id = $_SESSION['room_id'];
     
-    $player_name = $_POST['player_name'];
+    $player_name = htmlentities($_POST['player_name']);
     $player_role = 'player';
     $player_state = 'active';
 
@@ -71,11 +71,11 @@ class PunishmentsController extends BaseController {
 
     $_SESSION['player_name'] = $player_name;
 
-    $funny_punishment = $_POST['funny_punishment'];
+    $funny_punishment = htmlentities($_POST['funny_punishment']);
     // print($funny_punishment);
-    $interesting_punishment = $_POST['interesting_punishment'];
+    $interesting_punishment = htmlentities($_POST['interesting_punishment']);
     // print($interesting_punishment);
-    $dangerous_punishment = $_POST['dangerous_punishment'];
+    $dangerous_punishment = htmlentities($_POST['dangerous_punishment']);
     // print($dangerous_punishment);
 
     $punishment_array = array('funny_punishment' => $funny_punishment, 

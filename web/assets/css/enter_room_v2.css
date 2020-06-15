@@ -32,13 +32,12 @@
     color: #FC4C86;
     margin-left: 39%;
 }
-.text-checkbox{
+/* .text-checkbox{
     font-size: 3vw;
     font-family: "SVNLifehack Sans", Verdana, Tahoma; 
-    color: #FC4C86;
+    color: #FC4C86; 
     margin-left: 39%;
-} 
-}
+}  */
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
