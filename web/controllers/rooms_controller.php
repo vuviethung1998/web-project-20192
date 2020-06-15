@@ -48,7 +48,7 @@ class RoomsController extends BaseController {
             // $this->function_alert($key);
         }
 
-    }
+    }   
 
     public function enter_room() {
         $arr = include ('config/config.php');
