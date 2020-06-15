@@ -1,4 +1,4 @@
-var countDownDate = new Date(Date.now() + 60000);
+var countDownDate = new Date(Date.now() + 6);
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -18,6 +18,6 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown-clock").innerHTML = "EXPIRED";
+    location.href = 'http://localhost:8082/index.php?controller=players&action=render_room_main_host'
   }
 }, 1000);
