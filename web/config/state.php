@@ -13,6 +13,6 @@ return array(
     'Room number player must be number!' => 11,
     'Room is full!' => 12,
     'Player name is empty string' => 13,
-    'Player name of host is duplicated!' =>14
+    'Player name is duplicated!' =>14
 
 );

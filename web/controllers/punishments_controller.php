@@ -21,7 +21,7 @@ class PunishmentsController extends BaseController {
     
     $room_id = $_SESSION['room_id'];
 
-    $player_name = html_entities($_POST['player_name']);
+    $player_name = htmlentities($_POST['player_name']);
     $player_role = 'host';
     $player_state = 'active';
 
@@ -33,11 +33,11 @@ class PunishmentsController extends BaseController {
 
     $_SESSION['player_name'] = $player_name;
 
-    $funny_punishment = html_entities($_POST['funny_punishment']);
+    $funny_punishment = htmlentities($_POST['funny_punishment']);
     // print($funny_punishment);
-    $interesting_punishment = html_entities($_POST['interesting_punishment']);
+    $interesting_punishment = htmlentities($_POST['interesting_punishment']);
     // print($interesting_punishment);
-    $dangerous_punishment = html_entities($_POST['dangerous_punishment']);
+    $dangerous_punishment = htmlentities($_POST['dangerous_punishment']);
     // print($dangerous_punishment);
 
     $punishment_array = array('funny_punishment' => $funny_punishment, 
@@ -63,7 +63,7 @@ class PunishmentsController extends BaseController {
     
     $room_id = $_SESSION['room_id'];
     
-    $player_name = html_entities($_POST['player_name']);
+    $player_name = htmlentities($_POST['player_name']);
     $player_role = 'player';
     $player_state = 'active';
 
@@ -76,11 +76,11 @@ class PunishmentsController extends BaseController {
 
     $_SESSION['player_name'] = $player_name;
 
-    $funny_punishment = html_entities($_POST['funny_punishment']);
+    $funny_punishment = htmlentities($_POST['funny_punishment']);
     // print($funny_punishment);
-    $interesting_punishment = html_entities($_POST['interesting_punishment']);
+    $interesting_punishment = htmlentities($_POST['interesting_punishment']);
     // print($interesting_punishment);
-    $dangerous_punishment = html_entities($_POST['dangerous_punishment']);
+    $dangerous_punishment = htmlentities($_POST['dangerous_punishment']);
     // print($dangerous_punishment);
 
     $punishment_array = array('funny_punishment' => $funny_punishment, 
