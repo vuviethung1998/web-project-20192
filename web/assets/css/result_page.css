@@ -1,4 +1,4 @@
-.bg {
+.bg-result {
     /* The image used */
     background-image: url("../images/ui8.png");
 
@@ -12,6 +12,22 @@
 
     overflow: scroll;
     background-attachment: scroll;
+}
+
+/* .result-box {
+    position: absolute;
+    width: 50%; 
+    height: 400; 
+    border: 5px solid #FC4C86; 
+    border-radius: 50px
+} */
+
+.result-box {
+    margin: auto; 
+    width: 500; 
+    height: 400; 
+    border: 5px solid #FC4C86; 
+    border-radius: 50px
 }
 
 .title-result-page {

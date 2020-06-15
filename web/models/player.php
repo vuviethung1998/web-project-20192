@@ -22,7 +22,10 @@ class Player {
 
     $req = $db->prepare($create_punish_query);
     try {
-      if($req->execute(array(':player_name' => $player_name, 
+      if (empty($player_name)) {
+        return $state['Player name is empty string'];
+      }
+      else if($req->execute(array(':player_name' => $player_name, 
         ':player_role' => $player_role, 
         ':player_state' => $player_state, 
         ':room_id' => $room_id))) {
@@ -32,6 +35,7 @@ class Player {
     }
     catch (PDOException $e) {
       // echo "Error: " . $e->getMessage() . "<br />\n";
+      return $state['Player name is duplicated!'];
     }
   }
 

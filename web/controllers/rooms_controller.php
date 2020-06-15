@@ -21,11 +21,12 @@ class RoomsController extends BaseController {
 
         $state = include ('config/state.php');
         $room_password = htmlentities($_POST['room_password']);
-        $player_num = htmlentities($_POST['player_num']);
-        $max_player_num = $arr['max_num_players'];
+        $maximum_player_num = htmlentities($_POST['player_num']);
+        $maximum_player_number_in_config = $arr['max_num_players'];
         $is_closed = 0;
+        $player_number_now = 0;
         // print("start creating room");
-        $room_state = Room::createRoom($room_password, $player_num, $max_player_num, $is_closed);
+        $room_state = Room::createRoom($room_password, $player_number_now, $maximum_player_num, $maximum_player_number_in_config, $is_closed, $state);
 
         $_SESSION['room_id'] = $room_password;
         $_SESSION['room_state'] = $room_state;
@@ -50,11 +51,14 @@ class RoomsController extends BaseController {
     }
 
     public function enter_room() {
-        $room_password = htmlentities($_POST['room_password']);
+        $arr = include ('config/config.php');
         $state = include ('config/state.php');
 
+        $maximum_player_number_in_config = $arr['max_num_players'];
+        $room_password = htmlentities($_POST['room_password']);
+
     
-        $room_state = Room::find($room_password, $state);
+        $room_state = Room::find($room_password,  $maximum_player_number_in_config, $state);
 
         $_SESSION['room_id'] = $room_password;
         $_SESSION['room_state'] = $room_state;
