@@ -151,14 +151,3 @@
     </div>
 
 </div>
-<?php
-    $state = include ('config/state.php');
-    $room_state = $_SESSION['room_state'];
-    $key =  array_search ($_SESSION['room_state'],  $state );
-
-    if (!empty($key) ) {
-        echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $key . "' );</script>";
-        echo "<script>alert('$key');</script>"; 
-    }
-    unset($_SESSION['room_state']);
-?>
