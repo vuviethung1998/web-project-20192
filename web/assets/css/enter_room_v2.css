@@ -67,3 +67,49 @@ input[type=text] {
     margin-top: 3%;
     padding-bottom: 15px;
 }
+.pop-up{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin: auto;
+    left: 25%;
+    top: 35%;
+    width: 50%; /* Full width */
+    height: 30%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+  .pop-up-header {
+    padding: 2px 16px;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma;
+  }
+  
+  
+  .pop-up-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* animation-name: animatetop;
+    animation-duration: 0.4s; */
+  }
+  #error-message {
+    text-align: center;
+    font-size: 40px;
+    font-family: "SVNLifehack Sans", Verdana, Tahoma;
+  }
+  .pop-up-button{
+    color: white;
+    width: 30%;
+    height: 20%;
+    background-color: blue;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 35%;
+    margin-bottom: 2%;
+  }
