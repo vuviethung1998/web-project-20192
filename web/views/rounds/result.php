@@ -38,12 +38,12 @@
     <div style="margin: auto; width: 300; height: 100; border: 1px solid #FC4C86; border-radius: 15px; margin-top: 20px ">
       <p class="text-result-page" style="border: 0px;"><?php print($punishment_content) ?></p>
     </div>
-    <!-- <table>
+    <table>
       <tr>
         <form action="index.php" method="POST">
-          <button class="startbutton" style="position: relative; font-size: 42px; bottom: 0; left: 230px;">Return the home page</button>
+          <button class="startbutton" style="position: relative; font-size: 42px; bottom: 0; left: 230px;">Return to main room</button>
         </form>
       </tr>
-    </table> -->
+    </table>
   </div>
 </div>

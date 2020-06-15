@@ -51,7 +51,7 @@ class PunishmentsController extends BaseController {
       $this->render('room_main_host');
     }
     else {
-      echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $create_player_result . "' );</script>";
+      echo "<script type=\"text/javascript\">console.log('Debug Objects: player_state " . $_SESSION['player_state'] . "' );</script>";
       $this->folder = 'punishments';
       $this->render('add_punish_room_host');
     }
@@ -88,7 +88,6 @@ class PunishmentsController extends BaseController {
                               'dangerous_punishment' => $dangerous_punishment);
 
     $create_punishment_result = PunishmentsController::create_three_types_of_punishments($punishment_array, $room_id, $state);
-
   
     if($create_punishment_result == 1 && $create_player_result == 1) {
 
@@ -98,7 +97,7 @@ class PunishmentsController extends BaseController {
       $this->render('room_main_player');
     }
     else {
-      echo "<script type=\"text/javascript\">console.log('Debug Objects: " . $create_player_result . "' );</script>";
+      echo "<script type=\"text/javascript\">console.log('Debug Objects: player_state " . $_SESSION['player_state'] . "' );</script>";
       $this->folder = 'punishments';
       $this->render('add_punish_room_player');
     }

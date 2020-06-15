@@ -57,6 +57,9 @@
         <div class="modal-body">
           <div>
             <table id="rule-table">
+        <div class="modal-body">
+          <div>
+            <table id="rule-table">
               <tr>
                 <td class="rule-square" id="s1">Trừng phạt người bạn</td>
                 <td class="rule-square" id="s2">Trừng phạt Hưng</td>
@@ -77,11 +80,11 @@
     </div>
     <?php
     $state = include ('config/state.php');
-    $room_state = $_SESSION['room_state'];
-    $key =  array_search ($_SESSION['room_state'],  $state );
+    // $room_state = $_SESSION['room_state'];
+    $key =  array_search ($_SESSION['player_state'],  $state );
 
-    if (!empty($key) && $key != 1) {
-      echo '<div id = "errorPopup" class = "pop-up">
+    if (!empty($key) && $_SESSION['player_state'] != 1) {
+      echo '<div id = "errorPopup" class = "pop-up" style = "display:block"style = "display:block">
       <div class = "pop-up-content">
         <div class = "pop-up-header">
           <h2 id="pop-up-title">ERROR</h2>
@@ -93,9 +96,9 @@
       </div>
     </div>';
     }
-    unset($_SESSION['room_state']);
+    unset($_SESSION['player_state']);
     
-    ?>
+    ?>    
     <div id="aboutModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

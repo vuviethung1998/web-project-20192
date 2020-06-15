@@ -64,8 +64,8 @@
     $room_state = $_SESSION['room_state'];
     $key =  array_search ($_SESSION['room_state'],  $state );
 
-    if (!empty($key) && $key != 1) {
-      echo '<div id = "errorPopup" class = "pop-up">
+    if (!empty($key) && $_SESSION['room_state'] != 1) {
+      echo '<div id = "errorPopup" class = "pop-up" style = "display:block">
       <div class = "pop-up-content">
         <div class = "pop-up-header">
           <h2 id="pop-up-title">ERROR</h2>
