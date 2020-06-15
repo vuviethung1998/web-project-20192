@@ -20,9 +20,9 @@ class RoomsController extends BaseController {
         $arr = include ('config/config.php');
 
         $state = include ('config/state.php');
-        $room_password = html_entities($_POST['room_password']);
-        $maximum_player_num = html_entities($_POST['player_num']);
-        $maximum_player_number_in_config = $arr['max_num_players']);
+        $room_password = htmlentities($_POST['room_password']);
+        $maximum_player_num = htmlentities($_POST['player_num']);
+        $maximum_player_number_in_config = $arr['max_num_players'];
         $is_closed = 0;
         $player_number_now = 0;
         // print("start creating room");
@@ -48,14 +48,14 @@ class RoomsController extends BaseController {
             // $this->function_alert($key);
         }
 
-    }
+    }   
 
     public function enter_room() {
         $arr = include ('config/config.php');
         $state = include ('config/state.php');
 
         $maximum_player_number_in_config = $arr['max_num_players'];
-        $room_password = htmlentities(html_entities($_POST['room_password']);
+        $room_password = htmlentities($_POST['room_password']);
 
     
         $room_state = Room::find($room_password,  $maximum_player_number_in_config, $state);
