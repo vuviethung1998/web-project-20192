@@ -86,7 +86,7 @@ class PunishmentsController extends BaseController {
 
     if($create_punishment_result) {
 
-      $players_in_room = Player::find_players_in_room($room_id);
+      $players_in_room = Player::findPlayersInRoom($room_id);
 
       $this->folder = 'players';
       $this->render('room_main_player');
@@ -119,6 +119,11 @@ class PunishmentsController extends BaseController {
       return false;
     }
 
+  }
+
+  function getPunishment($punishment_id, $state) {
+    $punishment = Punishment::findPunishmentById($punishment_id, $state);
+    return $punishment;
   }
 
 }

@@ -27,5 +27,13 @@ class RoundsController extends BaseController {
 
       $this->render('result');
     }
+
+    function getRound($room_id, $state) {
+      $state = include ('config/state.php');
+      $room_id = $_SESSION['room_id'];
+
+      $result_data = Round::findRoundById($room_id, $state);
+      return $result_data;
+    }
 }
 ?>

@@ -51,7 +51,7 @@ class Player {
 
   }
 
-  function find_players_in_room($room_id) {
+  function findPlayersInRoom($room_id) {
     $db = DB::getInstance();
 
     $find_players_in_room_query = "SELECT player_name FROM player WHERE room_id='$room_id'";

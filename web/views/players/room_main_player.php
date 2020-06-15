@@ -1,6 +1,7 @@
 <?php
+  require_once('controllers/players_controller.php');
   $room_password = $_SESSION['room_id'];
-  $players_in_room = Player::find_players_in_room($room_password);
+  $players_in_room = PlayersController::find_players_in_room($room_password);
 ?>
 <script type="text/javascript">
   var room_id = <?php echo $_SESSION['room_id'] ?>;

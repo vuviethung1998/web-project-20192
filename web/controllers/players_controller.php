@@ -12,5 +12,15 @@ class PlayersController extends BaseController {
   function render_punishment_room() {
     $this->render('punishment_room');
   }
+
+  function find_players_in_room() {
+    $players_in_room = Player::findPlayersInRoom($room_password);
+    return $players_in_room;
+  }
+
+  function get_player($player_id, $state) {
+    $player = Player::findPlayerById($player_id, $state);
+    return $player;
+  }
 }
 ?>
