@@ -1,22 +1,22 @@
 <?php
-  require_once('models/round.php');
-  require_once('models/player.php');
-  require_once('models/punishment.php');
+  require_once('controllers/rounds_controller.php');
+  require_once('controllers/players_controller.php');
+  require_once('controllers/punishments_controller.php');
 
   $state = include ('config/state.php');
   $room_id = $_SESSION['room_id'];
 
-  $result_data = Round::findRoundById($room_id, $state);
+  $result_data = RoundsController::getRound($room_id, $state);
   // print($result_data);
 
   $player_id = $result_data['player_id'];
-  $player = Player::findPlayerById($player_id, $state);
+  $player = PlayersController::get_player($player_id, $state);
   // print_r($player);
   // print($player['player_name']);
   $player_name = $player['player_name'];
 
   $punishment_id = $result_data['punishment_id'];
-  $punishment = Punishment::findPunishmentById($punishment_id, $state);
+  $punishment = PunishmentsController::getPunishment($punishment_id, $state);
   // print_r($punishment);
   // print($punishment['punishment_content']);
   $punishment_content = $punishment['punishment_content'];

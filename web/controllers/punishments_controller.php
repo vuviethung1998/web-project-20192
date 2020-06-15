@@ -129,6 +129,11 @@ class PunishmentsController extends BaseController {
 
   }
 
+  function getPunishment($punishment_id, $state) {
+    $punishment = Punishment::findPunishmentById($punishment_id, $state);
+    return $punishment;
+  }
+
 }
 
 ?>

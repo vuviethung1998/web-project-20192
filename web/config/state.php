@@ -13,6 +13,8 @@ return array(
     'Room number player must be number!' => 11,
     'Room is full!' => 12,
     'Player name is empty string' => 13,
-    'Player name is duplicated!' =>14
-
+    'Player name is duplicated!' =>14,
+    'Player is not found' => 15,
+    'Punishment is not found' => 16,
+    'Fail to close room' => 17
 );
